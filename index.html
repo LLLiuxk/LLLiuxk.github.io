@@ -1,11 +1,2794 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo">
+  <meta name="author" content="Xiaokang Liu">
+
+  <meta name="description" content="Xiaokang Liu. Computer science PhD student at Shandong University IRC working in computer graphics">
+  
+  <link rel="alternate" hreflang="en-us" href="https://people.csail.mit.edu/liyifei/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <meta name="theme-color" content="#07BDC7">
+
+<!--     
+    <link rel="stylesheet" href="./Yifei Li_files/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous" media="all" onload="this.media=&#39;all&#39;">
+      <link rel="stylesheet" href="./Yifei Li_files/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="all" onload="this.media=&#39;all&#39;">
+          <link rel="stylesheet" href="./Yifei Li_files/github.min.css" crossorigin="anonymous" title="hl-light" media="all" onload="this.media=&#39;all&#39;">
+          <link rel="stylesheet" href="./Yifei Li_files/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media=&#39;all&#39;" disabled="">
+      <link rel="stylesheet" href="./Yifei Li_files/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="all" onload="this.media=&#39;all&#39;">
+        <script src="./Yifei Li_files/tex-chtml.js.下载" integrity="" crossorigin="anonymous" async=""></script>
+      <link rel="stylesheet" href="./Yifei Li_files/css"> -->
+  <link rel="stylesheet" href="./index_files/wowchemy.css">
+
+<!-- <script async="" src="./Yifei Li_files/js(1)"></script> -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-131144885-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+  
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+    <!-- <link rel="alternate" href="https://people.csail.mit.edu/liyifei/index.xml" type="application/rss+xml" title="Yifei Li">
+  
+    <link rel="manifest" href="https://people.csail.mit.edu/liyifei/manifest.webmanifest"> -->
+  <link rel="icon" type="image/png" href="./index_files/icon.jpg">
+  <link rel="apple-touch-icon" type="image/png" href="./index_files/icon.jpg">
+
+  <!-- <link rel="canonical" href="https://people.csail.mit.edu/liyifei/"> -->
+  
+ 
+<!-- <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://people.csail.mit.edu/liyifei/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://people.csail.mit.edu/liyifei/"
+}
+</script> -->
+
+<title>Xiaokang Liu</title>
+<style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+@keyframes caretBlink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+@keyframes rotateSpinner {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#text-tool-caret {
+    animation-name: caretBlink;  
+    animation-iteration-count: infinite;  
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 1s; 
+}
+
+#en-markup-loading-spinner {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+}
+
+#en-markup-loading-spinner img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation-name: rotateSpinner;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+.skitchToastBoxContainer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    pointer-events: none;
+}
+
+.skitchToastBox {
+    width: 200px;
+    height: 16px;
+    padding: 12px;
+    background-color: rgba(47, 55, 61, 0.95);
+    border-radius: 4px;
+    color: white;
+    cursor: default;
+    font-size: 10pt;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.32);
+    font-family: 'Soleil', Helvetica, Arial, sans-serif;
+    border: 2px rgba(255, 255, 255, 0.38) solid;
+}
+
+.lang-zh-cn .skitchToastBox {
+    font-family: '微软雅黑', 'Microsoft YaHei', SimSun,
+        '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic', 'Soleil',
+        Helvetica, Arial, sans-serif;
+}
+
+.lang-ja-jp .skitchToastBox {
+    font-family: '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic',
+        '微软雅黑', 'Microsoft YaHei', SimSun, 'Soleil', Helvetica, Arial,
+        sans-serif;
+}
+
+.skitchToast {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    height: 10px;
+    color: #f1f5f8;
+    text-align: center;
+}
+
+.skitchVisible {
+    /* Don't remove this class it's a hack used by the Evernote Clipper */
+}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+
+
+</style><style type="text/css">/* Copyright 2019-present Evernote Corporation. All rights reserved. */
+
+#en-markup-disabled {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: default;
+    -webkit-user-select: none;
+}
+
+#en-markup-alert-container {
+    position: absolute;
+    z-index: 9999;
+    width: 450px;
+    left: calc(50% - 225px);
+    top: calc(50% - 85px);
+    background-color: white;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.35);
+    -webkit-user-select: none;
+}
+
+#en-markup-alert-container .cell-1 {
+    position: relative;
+    height: 110px;
+    width: 105px;
+    float: left;
+    text-align: center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABT3SURBVFhHvZj3V5PptsfvvzBzxhHP8TrjmjnjXHXUQXoJPYAESOg1CSSBhBZCSWgJaQTpRbp0kN6ki1KkgwiE3nsRLChVKbPuDkH0ztx1zy93nb02L0/evHn2J9+9n5b/OPlXdvz/Z0dHR2et4+Oz3v9i/wLoCDo5FvVyePQJGp8OP4kaR/APGl+uHw8/iq/nN8V3wOFh+Dh8Fj4IDndEL48OofP/FesMaO/jjm8BXsH38h2vbyQZ39z1uSDle0Ha73vZAAlwOeYlhUDwfyhxLitzriB4V1R4V9T4P6gGXQVXP73+ydX4V1V4VxHcK8rcK/BBBdY/5FmXoB85poR0gIS0//fQ/12fv0E4Jb/LEBoAxCQiICCl59rCewpsCfX7l5HhP9yL+ckg4ZpR8g2ztNvWmdLYXDm7PHmHQlVyibpLGZJaoU2rvOdVjaLXGDBqDX3q0D51GLgyakVOrzH0rjbwqkLRKvXcynXheXKxOqlA1T5PCZcjB71ZpEmaJN/GJN7Qf3BNO+InFf5lSfrfAEAsmAjo06dP0j4SilwJ7agfjZKuWWTcxuXJOJYouVZoeFTrMOpRAc8wnBYzQZt1WBc+uocQ2+fwoJ/woN8ubsA+YZCYKCQmD5FTh6hpQo/UQc+UQY/kfvfEfmp8n0tMLyWiixjWYSdos+G2WAQ8M4bePGp03B5rUcrUSIXK9rnypsm3VYOvyPj9HTDOgPb29u54f6MWetk45b9sc+8CCrVKk16PYjYa8dssQ7rx0X0OiYMuqaO0jHH3nEmP9HGHqH40p1Hdv0rd/7FGYK1mcDMq4aVt/rRn5XxQ1Xxo5VxI+WxwyXRQ0RQnb5KVO+6XNuKdLHSP66dE9BKCO2zYLaa+Tw29anVdKzRJBYqoB79AkQDGGdDu7q6U3zfIyB8sMm87lCq612j5PEVxnpuFdGKj+4hJQteMMa/8af/cGWrGJCFrnMJt0DBj3NXASKvpyqrqymoayuuYyWPIstQkjaIx37aNpPaNtNZXD5vXkp+txj9Zjq1ZjKiYFxTNsB9N+qWOeMQNOEX02Ae1WTGbjOj1ei7l6mZpt+TZEjs722dAOzs7Un5/uxf7Ey5filqlwWhAQYJCunCxL8kpw9ScSZ/iOXbxIj1+yDgw3ziq2cLQUUrqtry8rJKSAgKhrKqKUFdDaKohtFTVVLwfYJrXIps3Q1s2Ipo3Ilo2oR3VtBnTuBFTvxpRuRhcMBOYOUZPHHSN6iVADbAajTyqtXGPZBD8f7z78O4LkLT/BVT8PwmF8l51uqBnSKdtbB/54QgNvlPZAr982T9l3IoYLmftoJ/QaqekKquogFBRUVFTU1NXV9fS0tLW1tbR1dFB6hlaaFEzZFyzfqfmSNIKbnuXSTLrZUPatRKFJjkzxPIVxuNldvEsO2ucAUyRPQR+q6XPE5RDsZJm6NXNrY2vgAIuGCZeg+rxazAIareKekFIGaLmTvlVLPArVpkZE1jnWISMtAyFhs3qcVFWV1BBqJ6j6Orq6unp6evrG5yaPkYHXM8IqWeiqWeqjrJEGBCkMe53sHxJer5qmpBQvhBQPBOYMUqPe+kU0okLbDJxLVe/F/XPtTfLMNDOgGRYF9BJ1yhlCMhraBc+fsA5e5xRNs+rWPHPmsS7xWooKsmrKqvTWS6F/Qx1JCRJHYlEilEAwtDQEIPBGInMxMTY1NTE3OzUTY3NTdBmGEMzNMpEXw99T1/XMRD1aJRWvsjKn2I+HKJF9TjwW608qrQN468vbMx8AZILvGCSesO5Qo3bYgrypA3TimYCSxa808exbrGaCory6hpII2NTfqh/9QhPW09NS1NEg0KhzlFMTU3Nzc0tLCwsLS2tvjJ4CffNzMxMTEwxaCM9HYPwQkrNOrt0jpc95hPf7xzSjqPXoYyTfpteG/0KiP2dafoNaqWGoM0qvt8pZ8KncM4rd5pEi9WTkZZVRWiaGJs5Ep0eJIY3TITdM9DS0daFHKHRaECBYGIOa2trW1tb7P80uGNjYwNvicn09TC+90mNb4IeL/LzJ1kPhbSILoLfE0Pz1NuTq0Ow2J0BKXAlzDN/86jRCumyTRG6FUwHlC57lkx5hBbg4h+7ptYxsus4uTWhZU0JMdleUDf6qC80X6PY2dnZ29sTPhu0wfB4vJgMHjNGm7n54JpfCWpXQkpm+Bkj9NgXjsxGY8t06YkVoQgIVNre2VbkS1jl3KbX6YZ34yFfxbPMokXnpG5LMgdpjFM3wSKt7PVtSWhrOyO9e1A3KKAxMTGBbwxJAQHEKEQi0eHUHL8yeAn3AQ4egMcszK0c3WybVgTP1iMez4XkjPnF9zlxmkxtM6XHVwZEQIeHh++33ysHSVjn/u7ToBfdS8gepRfOe2ZN4syclG9ek5S+Kycvo6ikiFBVUddU14LSEWsjpoHvDQJAPAhMJpOdnJycnZ1dPhu0weA+kJFIJFDL1gZLcMQ2LgY3b0bAnP5oPCCp35XXYoHNljkD2tvfe/f+jbJAwibvrt9TVGwfMXfcF/KVNWyHUJOVuiunqKgIUw4McvGwgjElztQ5DQgA8SgUChC4ublRqVR3d3faqUEb7ojJAAug7fD2BBK+YTbo+ZvI2sXIgkl2yqB7UKsVNld2cm1IVNQ7uzsApHRfAp8vxWwyiO93zJvwr1pnFE1SFJRk5WRkEQiEqqqqpqamjo4ODCtxsqCKIVPnNCCMq6srhAcIT09Pr88GbTDgE2MBNIlIsifgHw+xOrYi65eiYbFLFdIErda4HJnp9WGRQgD0/sM7RIiEfZFUYDMmYYCSPxlQt+FXv8LQ0FGSkxYB/VUeKE8oCMjUOQ1Ehdje3t4MBsPns0GbTqcDmYeHB+ACE9mRYk+wL+727/4Q1bASWzLNSx/yDG63xuXKzL6aOFNo6/1bldBLhGIZdgsmcZBSMBVQv87s2OIbW2vJSMmK8wUjC+bAc3kgWVCkUBbiTIlpIDZA+Pn5+fv7BwQEMMECmNCEmwAqZnJ2cibYE/Na/Xq3o56uxJbO8NKHPe932OAfiYBECu3u7YJCqmESxFIZznNMspBSOMWsW2UPHIWTvY2lfpf7Ol8wB4qr51weKA5IBwSDkBBYzBEYGMjhsH19/ClOoAjJxdnVh+EDOkFCXV1cCfaknEa/FzuRT1celM5yASik08YuX3b21fhXQBGXSKUy3FYjMVDNCnv4OIob5wBAsILCmvWnfImrB+pUnCwIBjQgDIvFYrPZXC43kMXmhfp0TxRMrNamFgYDCp3OABWpblQiwTHriX/ffvjT1ZiyWV7miGfoKdCcOGUwykRAUZdIZbLcdqOkIUrBtH/NMg8Uyqj3h5T9CQhGu7icxfkCIJAHkuXr6wvygDZAw+cHsdjMrunst0e9bw/7dk5ehkQzvTxFxQT0JAI5q57Ztx/2dDW6bJabMeoR2mVjVyAz92pcBLR/sL/1YUst+hKpXI7XjkkaIhdM+9UsC3oPghvGw5SUlCBl4oqGZesc6LyAxPkCICgdkIfD4fD5fIFAcD+Un5kflZAWmpgpqG1JTckK9fZifAai5NQHvjwIfboaVTbHyRylhXZZ2xfKzG9MilImBlKPuehQIcPtACDH/GmfmqXg9ve8/vcJaBNdJSWVr4H+VNHnQP5+onyJgYKDg0NCQgCMy+EFsjhQV4FsJuT0a6AX8IVXIktn2Rkj7iFdVvgCqcXNaZFCBwcHAKQRe8mxUpZ3CpQ3Ta+GmfQNZ+r4IcXTUkFO6f9I2XlF0+neUM5QQDweLygoCEQCAzjIIIBCeX0Bsqfk1LH7DoKfrISVzLIyRqn3uy3tCqWWXp9uPz5+/AhLh9aDS+RKGW4nOnGI+GjK8/Ei79kGd+I4ISKdJiet8KeiPp8Sz2qI5uHpTaMySCIlROOLA0yAAgYNeAmgkFAxEIx8oh05u4794iCofvl+8Yx/2ohLcJcZvlBy+fWsCAgOH9vbHzTjQSEpbqd+gtA+Z4JaNs96ss4THoVVvghRVFASD3vYb/x12IsmISrNw5vq4m8BE5C4rkEn4ACDxrk84qkIFLXHO+TUM3sOuDVL/IJpxsNhiqDTBFv0+xcgUEgz4ZJD5V12h16cEJc57loy51u/EtSxzR7bzzC10ocyOl83YCMG+w1xGcHaJJqmXdy8GbToQtH0CDPh2ZR4atAW00CRidcQ+AJ2eGJ+C7Nrn125yM6b9koZdgzqMsIX/76wOXWWsg8f3iMTLzpUSQZ26MYO2qSPUwpmvKuXeY2brOnj5PwnwQpyigryCKSWNmxW/7qQUSjOdD/q5PtSVoirHY7kTvVg0H1P1YJp2h+mg3MayC9kmUggPn7Jbt0OqFhg5k65Jw0TeV0YfMnvcxunE+PBxwNQCIBIVXeYHdpRA+YpY6RH07THi8yGdX7nB/bicX7zcBonlGZhbQTDTVMDqauDMsKY2ljb2tvZw+bHDkcMiw84/mN4cbc2uzKYHeJJ83YiO4k2GySiI83dQ0wDyYJpHZ53cCQ1LwQ/e8conffNmnSJH8LzuvRxJbdmN8ZEQGdFnXyRWHWL2a4ROWCaPGIPz5XM02tXOE0bgp5t7uxx4qvjktn9svbJrOyK0OBYupsn0crWzNTMxAhjYm5p2j6U88cfY4d/DH086Xl/0rR4WDn6urh7Jje/Npzq5QhLBxgkF2Z2WMjIzoTON4K6TY/CWa/0cdIDoQ2nUw9XBkCjZwptbW9ppwDQb/5taqH96Phh24wJcsGcx+OlgIZ1Qevr8J6tMOFu6NRR9NJx8uZx/puT8rWTx9M7ZV2z2bXdCTAj7570bJ90vngdkTNsEd+lF9d9r3CcuHZY+emks30qheRIIJMp4q2jrTXWO8Cpa5tbueaeN0NNGSdEC81ZHdq40t8A6HQeOgVCpl60r77h06Z8v08/dsgyZYyQPe1SvOBdvcJ69iq49XV071bS4Hbq2G7a1P7D+U8Plw7TV48zNo/z3h0XvT8p2zpprJn3IKf/bOOrgHXXxVJRFCZmaC3j3UnD0lGRf5AzHgeDkgBlZ2ZiJYih9R7CUdg5e4qSOIqNHDBhdWjhym/MbJzuh85qKO2iXdWvjDYFfp9O5KBxwohNxiQpb45atuRTu8p+9gp0iuzeShj4kDa8nT2xmz+9XzR3ULL0sWzlU8XGUf7UXqJvkbw13pyIc3IgUPA2ZA9/4sRu6vpR2cpxniDe1cpCdASAAwhs8uPz6W0H3nlzDumThLhhq/B+dECHGrb8+uSrwbOlAxZXEVD1Na9WaW6PZugAiGSWPIbNnHI4ZWJUrzKfvgp6vhne8Tamdyux/0Pq0Hbm6E7O5G7B7H7R0mFy8zqDyNSwNhdv4y2sbSx9+Y7Te5nzBzlzx2lB8WRzU9giiE5CcDQrf8Gte0/JmiYkj9lEC42D+/R82xHYil/H1/thg3+mkE76RXz1zx7PpVg9asH9upFCo/hRy9QJu6wZh4J5aumid9VqQN06t3EjuOV1RMfb2J6thL73yYMfUoe306c+RpXPOpiTkRamNnB8SyryXTqomjsonfuYPbn/cOhjREAMnH5gyTGHEWBta9G0yitax6VO4uJHzcMHDYL6kJAZbMW10bXez0Af3mlnfo+r/tn9+Z2AbiV+H4iEih4yShizejiBA6a8OZeiBY+KZZ+aNWb9OufphqB5M6RVRBbd+y52cI9fNG1ngkdCOozRppENmKfvXBpfezx55V67SsmaMCIx9DEGprDs6OroezFJnQeB6XNmiWPmUUPo+/26nF51epsstvKX4dUuUcpgpoai1s36Hlt9ldpyy69Ljv1CTdCPDBOiokeM4sfMUyaxGTPE3DlK4QK1ZMkLsKpXA2rXYG3hNm4KWl4Hd237lc47GOHUDfWNMIYmxg6KVuE/4B/8SIj7hRB5w8ZXDmOERhuiDQ0MNdW0M+sC6ncpCRNG0SPoMOE9/ktNVg/Cs00KW/nzyGq3CAj+YC3TyQaFfnRtucnolGb2KHD7VIEpVKgXNYyOGzNLmrBOm8JnzZAAK3/epXDRvWTJs3yFXrXqW7vm3/DWrX7Tw9pFS0cLBQuwvh4adc8Qdc/g1A31dA1RKH1YdpBaOuZWmLbXIRnLmJgRgzChblC/JvuFin+3PK1N0rbyp8lXA6JhD39wcgUg25ofXVque3bc8e2WZvYqcPpUg/q1QoS6EcP6MaNGceOmiRNWD6ew6dP4zFlizpzDo3lKwaJL8SK1ZM2uacebn2qnIIvQ0YFtga4eHG7hIvIzQyK15WWV0spYDfu0yDGtMKGOYECD04cI6FGgd0m5Pb9pXv7Dyps5ONefne11cr6zqfpPl+cAdJvefVfE9EIhsE+Z168qGNQKFWGhokcNHoyJyJImLFMmrVOnbNNncFlz9jkLNgVrNu1vw315FFVVNQV5JTjpQnhFeQTspeRkFOVkFGB5DoljvPwU9WAWeV+oKRhQ57xUDuiVh0BenZLkpl/RxZfgePgFSDPzW6uqy84t193bb3h23PLukmT0SPn1iLDYfUrcfpWgAfXgQRAMGTZ8L3JEP2rEIHYUHTdunDBhnDxpnjyDzluz7N6LaByPy6oKis9hRaT4CmI8BTFe0EjK5zwbTeg9CEta0AsSIoIGVDh9IhqfHmlGt5Rnh6Rd/VXtnO8gUWdAu7u7mg+/Q5dcIjT87Pr8OrX9pnv7TVqHyD07b3l23vbulvTpBj7ZgF45Zp8SKMd5qcLtV+X3awQPat4XIkOHkGEjWpETmqmLmLxXuJLXpIo3zo/fuFa8cS17Qy7YsE9ZNLo/Ch9RZvcps14o+fcq+HbL0kGeDimnphsmZZcBADDOgPb29khpmlqZ36JLLlpVX7atvYKt/xFXfxX35Cr+yVW7Jz/ZN/xMePoL8dkvpGfXHJ796tgIfp3cdB36cm6+6dxy0+X5LbfWO+5tZ05rv+Pefpvadsut7aZrK7x7w7nlBjzv2PQrqfEa9AO92TX8hK+7al17xbj0klbWt/apKl9+FoaRP7c4a/FATi3pO2TOt7r534ldT+Tf3yu4gPrs+oUXP/slcINzLzpzQ/Di0+upG3x5/iKq8KwT6BC6FYfQzv0WgkLo2YWZLz+cw0Db399fXl7u7e1tbm5u/DcahIOgEBrkAYwzIDETAMJdSCTU+L/NIBwEhdBimpOTk/8GkPkddVxNk+cAAAAASUVORK5CYII=);
+    background-position: 65% 50%;
+    background-repeat: no-repeat;
+}
+
+#en-markup-alert-container .cell-2 {
+    position: relative;
+    float: left;
+    width: 345px;
+    margin-top: 29px;
+    margin-bottom: 20px;
+}
+
+#en-markup-alert-container .cell-2 .cell-2-title {
+    margin-bottom: 5px;
+    padding-right: 30px;
+    font-size: 12pt;
+    font-family: Tahoma, Arial;
+}
+
+#en-markup-alert-container .cell-2 .cell-2-message {
+    padding-right: 30px;
+    font-size: 9.5pt;
+    font-family: Tahoma, Arial;
+}
+
+#en-markup-alert-container .cell-3 {
+    position: relative;
+    width: 450px;
+    height: 60px;
+    float: left;
+    background-color: rgb(240,240,240);
+}
+
+#en-markup-alert-container .cell-3 button {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 110px;
+    height: 36px;
+}
+
+#en-markup-alert-container .cell-3 button.alt-button {
+    position: absolute;
+    top: 12px;
+    right: 140px;
+    width: 110px;
+    height: 36px;
+}
+</style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper">
+
+  
+  <!-- <script src="./Yifei Li_files/wowchemy-init.min.7f3e7639f4c7f2a2cf83b68ea7de7f08.js.下载"></script> -->
+
+  
+
+
+
+<div class="page-header">
+ 
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="https://llliuxk.github.io/">Xiaokang Liu</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html/#about" data-target="#about"><span>Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://people.csail.mit.edu/liyifei/#featured" data-target="#featured"><span>Publications</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://people.csail.mit.edu/liyifei/#experience" data-target="#experience"><span>Experience</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://people.csail.mit.edu/liyifei/#posts" data-target="#posts"><span>Posts</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="https://people.csail.mit.edu/liyifei/#media" data-target="#media"><span>Media Coverage</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://people.csail.mit.edu/liyifei/#contact" data-target="#contact"><span>Contact</span></a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">    </ul>
+  </div>
+</nav>
+  </div>
+  <div class="page-body">
+   
+<span class="js-widget-page d-none"></span>
+
+<section id="about" class="home-section wg-about  " style="padding: 30px 0 50px 0;">
+   <div class="home-section-bg "></div>
+    <div class="container">
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+
+      <img class="avatar avatar-circle" width="1900" height="1900" src="./index_files/person.jpg" alt="Xiaokang Liu">
+      <div class="portrait-title">
+        <h2>Xiaokang Liu</h2>
+        <h3>刘晓康 | CS PhD Student</h3>
+        <h3>        
+            <span>Shandong University</span>
+            
+        </h3>
+        
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+
+        <li>
+          <a href="https://scholar.google.com/citations?user=N4ejGnoAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="google-scholar">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/omegaiota" target="_blank" rel="noopener" aria-label="github">
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://people.csail.mit.edu/liyifei/uploads/cv-0424.pdf" aria-label="cv">
+            <i class="ai ai-cv big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="col-12 col-lg-8">
+    <div class="article-style">
+      <p>I am a PhD graduate at <a href="https://irc.cs.sdu.edu.cn/" target="_blank">Interdisciplinary Research Center(IRC)</a> of Shandong University.
+      My supervisor is <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Prof. Changhe Tu</a> and my co-supervisor is <a href="https://irc.cs.sdu.edu.cn/~lulin/index.html" target="_blank">Prof. Lin Lu</a>.
+      I was fortunate to be awarded the first prize for the best paper at the Symposium on Solid and Physical Modeling (SPM 2020). 
+      <p>In my spare time, I enjoy basketball, animation and computer games.
+
+    </div>
+
+    <div class="row">
+
+      
+      <div class="col-md-5">
+        <div class="section-subheading">Interests</div>
+        <ul class="ul-interests mb-0">
+          
+          <li>Computer Graphics</li>
+          
+          <li>Intelligent Manufacturing</li>
+          
+          <li>Computational Design &amp; Fabrication</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-md-7">
+        <div class="section-subheading">Education</div>
+        <ul class="ul-edu fa-ul mb-0">
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="institution">Shandong University<span style="float:right;font-size: 0.9rem"> 2019 - 2024</span></p>
+              <p class="course">Ph.D. in Computer Science and Technology&nbsp;</p>
+              <p class="minor"></p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="institution">Shandong University<span style="float:right;font-size: 0.9rem"> 2016 - 2019</span></p>
+              <p class="course">M.S. in Software Engineering&nbsp;</p>
+              <p class="minor"></p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="institution">Zhengzhou University<span style="float:right;font-size: 0.9rem"> 2012 - 2016</span></p>
+              <p class="course">B.S. in Computer Science and Technology</p>
+              <p class="minor"></p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="featured" class="home-section wg-featured  " style="padding: 60px 0 100px 0;">
+   <div class="home-section-bg "></div>
+    <div class="container">
+
+    
+      <div class="row  justify-content-center">
+      
+        
+          <div class="section-heading col-12 mb-3 text-center">
+            <h1 class="mb-0">Publications</h1><p>
+          </div>
+
+<div class="col-12 ">
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://irc.cs.sdu.edu.cn/AuxeticDihedral/index.html">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/teaser1.jpg" alt="Auxetic Dihedral Escher Tessellations" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://irc.cs.sdu.edu.cn/AuxeticDihedral/index.html">Auxetic Dihedral Escher Tessellations</a>
+        </div>
+        <div class="stream-meta article-metadata">
+          <div class="article-metadata">
+            <div> 
+              <span class="author-highlighted">
+                <a href="https://llliuxk.github.io/">Xiaokang Liu</a></span>, <span><a href="https://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a></span>, 
+                <span><a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a></span>, <span><a href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/"> Oliver Deussen</a></span>, 
+                <span><a href="https://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a></span>
+  </div>
+  
+  <span class="pub-publication">
+    Graphical Models (presented at <strong>CVM 2024</strong>)    
+  </span>  
+  <span class="middot-divider"></span>
+  <span class="article-date"> April 2024
+  </span>
+ 
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/publication/diffavatar/" class="summary-link">
+          <div class="article-style">
+            Physics-based digital avatar body and garment shape and material joint optimization using differentiable simulation
+          </div>
+        </a>
+     
+        <div class="btn-links">
+ 
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://irc.cs.sdu.edu.cn/AuxeticDihedral/AuxeticDihedral/AuxeticDihedral.pdf" target="_blank" rel="noopener">
+  PDF 
+</a>
+
+<a href="./index_files/cite.bib" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal">
+  Cite
+</a>
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1016/j.gmod.2024.101215" target="_blank" rel="noopener">
+  DOI
+</a>
+
+<!-- <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://irc.cs.sdu.edu.cn/AuxeticDihedral/AuxeticDihedral/Auxetic dihedral Escher tessellation2.pptx" target="_blank" rel="noopener">
+  PPT
+</a>
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="http://irc.cs.sdu.edu.cn/Dihedral/files/DihedralTessellation.pptx" target="_blank" rel="noopener">
+  PPT
+</a> -->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://people.csail.mit.edu/liyifei/publication/animateddrawings/">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_hu2464090d54c33de0aa0cfd94da72bc53_159810_800x0_resize_lanczos.gif" alt="A Method for Automatically Animating Children’s Drawings of the Human Figure" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://people.csail.mit.edu/liyifei/publication/animateddrawings/">A Method for Automatically Animating Children’s Drawings of the Human Figure</a>
+        </div>
+
+        <div class="stream-meta article-metadata">
+          
+
+          
+
+
+<div class="article-metadata">
+  
+  
+  
+  
+  <div>
+    
+
+  <span>
+      <a href="http://hjessmith.com/html/">Harrison Jesse Smith</a></span>, <span>
+      <a href="https://www.linkedin.com/in/somya/">Somya Jain</a></span>, <span class="author-highlighted">
+      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>, <span>
+      <a href="https://scholar.google.com/citations?user=3yPjBLQAAAAJ&amp;hl=en">Qingyuan Zheng</a></span>, <span>
+      <a href="https://www.cs.cmu.edu/~jkh/">Jessica Hodgins</a></span>
+  </div>
+  
+  
+
+
+  
+  <span class="pub-publication">
+    
+      ACM Transactions on Graphics (presented at <strong>SIGGGRAPH 2023</strong>)
+    
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-date">
+    
+    
+      
+    
+    February 2023
+  </span>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/publication/animateddrawings/" class="summary-link">
+          <div class="article-style">
+            A framework for bringing children’s drawings of human figures to life. Try out our Public Demo (which was used by millions of users) to animate your own drawing, or explore our Dataset of ~180,000 animated drawings for your own research.
+          </div>
+        </a>
+        
+
+        
+        <div class="btn-links">
+          
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2303.12741.pdf" target="_blank" rel="noopener">
+  PDF 
+</a>
+
+
+
+
+
+
+<a href="https://people.csail.mit.edu/liyifei/#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/liyifei/publication/animateddrawings/cite.bib">
+  
+  Cite
+</a>
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/facebookresearch/AnimatedDrawings" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/facebookresearch/AnimatedDrawings#amateur-drawings-dataset" target="_blank" rel="noopener">
+  Dataset
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTechatMeta%2Fvideos%2F1228598794216404%2F" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1145/3592788" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2303.12741" target="_blank" rel="noopener">
+  arXiv
+</a>
+
+
+
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://people.csail.mit.edu/liyifei/publication/anisotropicstokes/">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_hu489d63f903c370465b2191ce034dcfb7_1355721_800x0_resize_q100_lanczos.jpeg" alt="Fluidic Topology Optimization with an Anisotropic Mixture Model" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://people.csail.mit.edu/liyifei/publication/anisotropicstokes/">Fluidic Topology Optimization with an Anisotropic Mixture Model</a>
+        </div>
+
+        <div class="stream-meta article-metadata">
+          
+
+          
+
+
+<div class="article-metadata">
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>, <span>
+      <a href="https://people.iiis.tsinghua.edu.cn/~taodu/">Tao Du</a></span>, <span>
+      <a href="https://sanggs.github.io/">Sangeetha Grama Srinivasan</a></span>, <span>
+      <a href="https://people.csail.mit.edu/kuiwu/">Kui Wu</a></span>, <span>
+      <a href="https://cs.dartmouth.edu/~bozhu/">Bo Zhu</a></span>, <span>
+      <a href="https://pages.cs.wisc.edu/~sifakis/">Eftychios Sifakis</a></span>, <span>
+      <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a></span>
+  </div>
+  
+  
+
+
+  
+  <span class="pub-publication">
+    
+      ACM Transactions on Graphics (<strong>Proceedings of SIGGRAPH Asia 2022</strong>)
+    
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-date">
+    
+    
+      
+    
+    September 2022
+  </span>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/publication/anisotropicstokes/" class="summary-link">
+          <div class="article-style">
+            A topology optimization method with an anisotropic and differentiable constitutive model to design Stokes-flow fluidic devices.
+          </div>
+        </a>
+        
+
+        
+        <div class="btn-links">
+          
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://people.csail.mit.edu/liyifei/uploads/topostokes.pdf" target="_blank" rel="noopener">
+  PDF (34.4M)
+</a>
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://people.csail.mit.edu/liyifei/uploads/topostokes-lowres.pdf" target="_blank" rel="noopener">
+  PDF (Low Res) (2.1M)
+</a>
+
+
+
+
+<a href="https://people.csail.mit.edu/liyifei/#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/liyifei/publication/anisotropicstokes/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://people.csail.mit.edu/liyifei/uploads/anisotropicStokes-siggraph.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=0AJbtATZ1B0" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+    
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=s1WcUdsB5i0" target="_blank" rel="noopener">
+  Talk
+</a>
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1145/3550454.3555429" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2209.10736" target="_blank" rel="noopener">
+  arXiv
+</a>
+
+
+
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://people.csail.mit.edu/liyifei/publication/diffcloth/">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_hud5f488d115cd005956d587cf13eb4954_1776955_800x0_resize_lanczos_3.png" alt="DiffCloth: Differentiable Cloth Simulation with Dry Frictional Contact" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://people.csail.mit.edu/liyifei/publication/diffcloth/">DiffCloth: Differentiable Cloth Simulation with Dry Frictional Contact</a>
+        </div>
+
+        <div class="stream-meta article-metadata">
+          
+
+          
+
+
+<div class="article-metadata">
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>, <span>
+      <a href="https://people.iiis.tsinghua.edu.cn/~taodu/">Tao Du</a></span>, <span>
+      <a href="https://people.csail.mit.edu/kuiwu/">Kui Wu</a></span>, <span>
+      <a href="http://people.csail.mit.edu/jiex/">Jie Xu</a></span>, <span>
+      <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a></span>
+  </div>
+  
+  
+
+
+  
+  <span class="pub-publication">
+    
+      ACM Transactions on Graphics (presented at <strong>SIGGGRAPH 2022</strong>)
+    
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-date">
+    
+    
+      
+    
+    April 2022
+  </span>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/publication/diffcloth/" class="summary-link">
+          <div class="article-style">
+            A differentiable cloth simulator that uses a fast and novel method for deriving gradients in PD-based cloth simulation with dry frictional contact.
+          </div>
+        </a>
+        
+
+        
+        <div class="btn-links">
+          
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://people.csail.mit.edu/liyifei/uploads/diffcloth-highres-tog.pdf" target="_blank" rel="noopener">
+  PDF (10.1M)
+</a>
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://people.csail.mit.edu/liyifei/uploads/diffcloth-lowres-tog.pdf" target="_blank" rel="noopener">
+  PDF (Low Res) (870K)
+</a>
+
+
+
+
+<a href="https://people.csail.mit.edu/liyifei/#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/liyifei/publication/diffcloth/cite.bib">
+  Cite
+</a>
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/omegaiota/DiffCloth" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://people.csail.mit.edu/liyifei/uploads/DiffCloth_SIGGRAPH_8_min.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=WWmWuhJcPYY" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+    
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=GH8jLG7UIYQ" target="_blank" rel="noopener">
+  Talk
+</a>
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1145/3527660" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2106.05306" target="_blank" rel="noopener">
+  arXiv
+</a>
+
+
+
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://people.csail.mit.edu/liyifei/publication/joinable-learning-bottom-up-assembly-of-parametric-cad-joints/">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_hud7a2249aa189f7648dc3d6cfe2383b86_346579_800x0_resize_lanczos_3.png" alt="JoinABLe: Learning Bottom-up Assembly of Parametric CAD Joints" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://people.csail.mit.edu/liyifei/publication/joinable-learning-bottom-up-assembly-of-parametric-cad-joints/">JoinABLe: Learning Bottom-up Assembly of Parametric CAD Joints</a>
+        </div>
+
+        <div class="stream-meta article-metadata">
+          
+
+          
+
+
+<div class="article-metadata">
+  
+  
+  
+  
+  <div>
+    
+
+  <span>
+      <a href="https://www.karlddwillis.com/">Karl D.D. Willis</a></span>, <span>
+      <a href="https://pradeep-pyro.github.io/">Pradeep Kumar Jayaraman</a></span>, <span>
+      <a href="https://chuhang.github.io/">Hang Chu</a></span>, <span>
+      <a href="https://www.yunshengtian.com/">Yunsheng Tian</a></span>, <span class="author-highlighted">
+      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>, <span>
+      <a href="https://www.danielegrandi.com/">Daniele Grandi</a></span>, <span>
+      <a href="https://scholar.google.com/citations?user=q0-11e25FxIC&amp;hl=en">Aditya Sanghi</a></span>, <span>
+      <a href="https://www.linht.com/">Linh Tran</a></span>, <span>
+      <a href="https://www.autodesk.com/research/people/joseph-lambourne">Joseph G. Lambourne</a></span>, <span>
+      <a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama</a></span>, <span>
+      <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a></span>
+  </div>
+  
+  
+
+
+  
+  <span class="pub-publication">
+    
+      Computer Vision and Pattern Recognition  <strong>(CVPR)</strong> 2022
+    
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-date">
+    
+    
+      
+    
+    March 2022
+  </span>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/publication/joinable-learning-bottom-up-assembly-of-parametric-cad-joints/" class="summary-link">
+          <div class="article-style">
+            A learning-based method that assembles parts together to form joints.
+          </div>
+        </a>
+        
+
+        
+        <div class="btn-links">
+          
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2111.12772.pdf" target="_blank" rel="noopener">
+  PDF 
+</a>
+
+
+
+
+
+
+<a href="https://people.csail.mit.edu/liyifei/#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/liyifei/publication/joinable-learning-bottom-up-assembly-of-parametric-cad-joints/cite.bib">
+  Cite
+</a>
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/AutodeskAILab/JoinABLe" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.karlddwillis.com/joinable/" target="_blank" rel="noopener">
+  Project
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://people.csail.mit.edu/liyifei/publication/algorithmic-quilting-pattern-generation/">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_huf034efaacfd3f29bf855abd65ad0f91c_11409549_800x0_resize_q100_lanczos.jpg" alt="Algorithmic Quilting Pattern Generation for Pieced-Quilts" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://people.csail.mit.edu/liyifei/publication/algorithmic-quilting-pattern-generation/">Algorithmic Quilting Pattern Generation for Pieced-Quilts</a>
+        </div>
+
+        <div class="stream-meta article-metadata">
+          
+
+          
+
+
+<div class="article-metadata">
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>, <span>
+      <a href="https://www.cs.drexel.edu/~david/">David E. Breen</a></span>, <span>
+      <a href="http://www.cs.cmu.edu/~jmccann/">Jim McCann</a></span>, <span>
+      <a href="https://www.cs.cmu.edu/~jkh/">Jessica Hodgins</a></span>
+  </div>
+  
+  
+
+
+  
+  <span class="pub-publication">
+    
+      Graphics Interface 2019
+    
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-date">
+    
+    
+      
+    
+    May 2019
+  </span>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/publication/algorithmic-quilting-pattern-generation/" class="summary-link">
+          <div class="article-style">
+            A computational framework to algorithmically design and fabricate quilts with decorative patterns.
+          </div>
+        </a>
+        
+
+        
+        <div class="btn-links">
+          
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://graphicsinterface.org/wp-content/uploads/gi2019-13.pdf" target="_blank" rel="noopener">
+  PDF 
+</a>
+
+
+
+
+
+
+<a href="https://people.csail.mit.edu/liyifei/#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/liyifei/publication/algorithmic-quilting-pattern-generation/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.20380/GI2019.13" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/https://arxiv.org/abs/2106.05306" target="_blank" rel="noopener">
+  arXiv
+</a>
+
+
+
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+    
+  
+
+  
+  
+  
+
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="experience" class="home-section wg-experience  " style="padding: 30px 0 50px 0;">
+   <div class="home-section-bg "></div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Experience</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+<div class="col-12 col-lg-8">
+  
+
+  
+  
+
+  
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col ">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-5 d-flex align-content-start"> <a href="https://people.csail.mit.edu/liyifei/diffavatar/">   
+                <img style="border: 0px solid #8f9aa3;position: relative; vertical-align: bottom; min-height: 70%; top: 10%;  padding-right: 0px; padding-bottom: 15px;  max-height: 90% " class="my-publication-card" src="./Yifei Li_files/diffavatar.png">
+                
+              </a>
+            </div>
+            
+            <div class="card-body  col-12 col-lg-7">
+            
+              <div class="d-flex align-content-start">
+                <div class="mr-2 mb-2"><a href="https://about.meta.com/realitylabs/" target="_blank" rel="noopener"><img src="./Yifei Li_files/meta2.svg" width="56px" height="56px" alt="Meta Reality Labs"></a></div>
+                <div>
+              
+    
+                  <div class="section-subheading card-title exp-title text-muted my-0">Research Scientist Intern</div>
+                  <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://about.meta.com/realitylabs/" target="_blank" rel="noopener">Meta Reality Labs</a></div>
+
+                  <div class="text-muted exp-meta">
+                    Managed by &nbsp;<a href="https://tuurstuyck.github.io/" target="_blank" rel="noopener">Tuur Stuyck</a>
+                  </div>
+
+                  <div class="text-muted exp-meta">
+                    May 2023 –
+                    
+                      Sep 2023
+                    
+                    
+                      <span class="middot-divider"></span>
+                      <span>Sausalito, CA</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+    
+              <div class="card-text">Research on  physics-based digital avatar body and garment shape and material joint optimization using differentiable simulation, which resulted in a <a href="https://people.csail.mit.edu/liyifei/diffavatar/">paper</a> that is currently in submission.</div>
+         
+          </div>
+         
+
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+
+
+        <div class="container">
+          <div class="row">
+            <div class="card-body col-12 col-lg-12"> 
+            
+              <div class="d-flex align-content-start">
+                <div class="mr-2 mb-2"><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener"><img src="./Yifei Li_files/nvidia.svg" width="56px" height="56px" alt="NVIDIA"></a></div>
+                <div>
+              
+    
+                  <div class="section-subheading card-title exp-title text-muted my-0">Research Intern</div>
+                  <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener">NVIDIA</a></div>
+
+                  <div class="text-muted exp-meta">
+                    Managed by &nbsp;<a href="https://www.linkedin.com/in/mmacklin/" target="_blank" rel="noopener">Miles Macklin</a>
+                    ,&nbsp;<a href="https://jonathancleaf.com/" target="_blank" rel="noopener">Jonathan Leaf</a>
+                  </div>
+
+                  <div class="text-muted exp-meta">
+                    May 2022 –
+                    
+                      Aug 2022
+                    
+                    
+                      <span class="middot-divider"></span>
+                      <span>(remote) Cambridge, MA</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+    
+              <div class="card-text">Research intern in the Simulation Technology group, where I worked on neural surrogate simulation model for cloth-body dynamics.</div>
+         
+          </div>
+         
+
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-5 d-flex align-content-start"> <a href="https://ai.facebook.com/blog/using-ai-to-bring-childrens-drawings-to-life/">   
+                <img style="border: 0px solid #8f9aa3;position: relative; vertical-align: bottom; min-height: 70%; top: 10%;  padding-right: 0px; padding-bottom: 15px;  max-height: 90% " class="my-publication-card" src="./Yifei Li_files/animatedrawing.jpg">
+                
+              </a>
+            </div>
+            
+            <div class="card-body  col-12 col-lg-7">
+            
+              <div class="d-flex align-content-start">
+                <div class="mr-2 mb-2"><a href="https://ai.facebook.com/" target="_blank" rel="noopener"><img src="./Yifei Li_files/meta2.svg" width="56px" height="56px" alt="Facebook AI Research"></a></div>
+                <div>
+              
+    
+                  <div class="section-subheading card-title exp-title text-muted my-0">Research Intern</div>
+                  <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://ai.facebook.com/" target="_blank" rel="noopener">Facebook AI Research</a></div>
+
+                  <div class="text-muted exp-meta">
+                    Managed by &nbsp;<a href="https://www.cs.cmu.edu/~jkh/" target="_blank" rel="noopener">Jessica Hodgins</a>
+                  </div>
+
+                  <div class="text-muted exp-meta">
+                    May 2020 –
+                    
+                      Aug 2020
+                    
+                    
+                      <span class="middot-divider"></span>
+                      <span>Pittsburgh, PA</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+    
+              <div class="card-text">Research on animating children’s humanoid sketches. The project resulted in a <a href="https://people.csail.mit.edu/liyifei/animateddrawings/">publication</a> in ACM Transactions on Graphics, a <a href="https://sketch.metademolab.com/canvas">public demo</a> with millions of users, which in turn resulted in an annotated <a href="https://github.com/facebookresearch/AnimatedDrawings#amateur-drawings-dataset">dataset</a> of ~180,000 children drawings.</div>
+         
+          </div>
+         
+
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-5 d-flex align-content-start"> <a href="https://blog.google/products/maps/sustainable-immersive-maps-announcements/">   
+                <img style="border: 0px solid #8f9aa3;position: relative; vertical-align: bottom; min-height: 70%; top: 10%;  padding-right: 0px; padding-bottom: 15px;  max-height: 90% " class="my-publication-card" src="./Yifei Li_files/arnavigation.jpg">
+                
+              </a>
+            </div>
+            
+            <div class="card-body  col-12 col-lg-7">
+            
+              <div class="d-flex align-content-start">
+                <div class="mr-2 mb-2"><a href="https://about.google/" target="_blank" rel="noopener"><img src="./Yifei Li_files/google.svg" width="56px" height="56px" alt="Google (GeoAR Team)"></a></div>
+                <div>
+              
+    
+                  <div class="section-subheading card-title exp-title text-muted my-0">Software Engineering Intern</div>
+                  <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://about.google/" target="_blank" rel="noopener">Google (GeoAR Team)</a></div>
+
+                  <div class="text-muted exp-meta">
+                    Managed by &nbsp;<a href="https://www.linkedin.com/in/cdcorrea/" target="_blank" rel="noopener">Carlos Correa</a>
+                  </div>
+
+                  <div class="text-muted exp-meta">
+                    May 2019 –
+                    
+                      Aug 2019
+                    
+                    
+                      <span class="middot-divider"></span>
+                      <span>Mountain View, CA</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+    
+              <div class="card-text">Designed, implemented and and created a demo for photorealistic rendering of geo-located outdoor and indoor AR objects. The concept of the demo is now revealed in <a href="https://blog.google/products/maps/sustainable-immersive-maps-announcements/">Google Map immersive AR Navigation</a>, where AR widgets are rendered realistically by estimating the lighting model of the environment.</div>
+         
+          </div>
+         
+
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col ">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-5 d-flex align-content-start"> <a href="https://www.youtube.com/watch?v=BjiaMBk6rHk">   
+                <img style="border: 0px solid #8f9aa3;position: relative; vertical-align: bottom; min-height: 70%; top: 10%;  padding-right: 0px; padding-bottom: 15px;  max-height: 90% " class="my-publication-card" src="./Yifei Li_files/grass-down-Bridge.png">
+                
+              </a>
+            </div>
+            
+            <div class="card-body  col-12 col-lg-7">
+            
+              <div class="d-flex align-content-start">
+                <div class="mr-2 mb-2"><a href="https://www.activisionblizzard.com/" target="_blank" rel="noopener"><img src="./Yifei Li_files/atvi3.svg" width="56px" height="56px" alt="Activision Blizzard"></a></div>
+                <div>
+              
+    
+                  <div class="section-subheading card-title exp-title text-muted my-0">Software Engineering Intern</div>
+                  <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.activisionblizzard.com/" target="_blank" rel="noopener">Activision Blizzard</a></div>
+
+                  <div class="text-muted exp-meta">
+                    Managed by &nbsp;<a href="https://www.linkedin.com/in/cdcorrea/" target="_blank" rel="noopener">Michael Vance</a>
+                    ,&nbsp;<a href="https://www.linkedin.com/in/wade-brainerd/" target="_blank" rel="noopener">Wade Brainerd</a>
+                  </div>
+
+                  <div class="text-muted exp-meta">
+                    May 2018 –
+                    
+                      Aug 2018
+                    
+                    
+                      <span class="middot-divider"></span>
+                      <span>Portland, ME</span>
+                    
+                  </div>
+                </div>
+              </div>
+              
+    
+              <div class="card-text">Implemented and optimized (~7ms/frame on PS4 ) a procedural grass system that runs on GPU for the core game engine of Call of Duty Black Ops 4, which was shipped with the game’s battle royale mode across all platforms in October 2018. You can see the procedural grass system in the <a href="https://www.youtube.com/watch?v=BjiaMBk6rHk">BO4’s Battle Royale mode trailer</a>.</div>
+         
+          </div>
+         
+
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="posts" class="home-section wg-pages  " style="padding: 30px 0 50px 0;">
+   <div class="home-section-bg "></div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Posts</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+<div class="col-12 col-lg-8">
+
+  
+
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      
+      
+      
+      <a href="https://people.csail.mit.edu/liyifei/post/phd-resource/">
+        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_hu4f7af0eb4165f229904371014436b91b_4385293_800x0_resize_q100_lanczos.jpg" alt="Helpful Resources" loading="lazy">
+      </a>
+      
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="media-body">
+        <div class="section-subheading article-title mb-0 mt-0">
+          <a href="https://people.csail.mit.edu/liyifei/post/phd-resource/">Helpful Resources</a>
+        </div>
+
+        <div class="stream-meta article-metadata">
+          
+
+          
+
+
+<div class="article-metadata">
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>
+  </div>
+  
+  
+
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 25, 2022
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+        </div>
+        
+        <a href="https://people.csail.mit.edu/liyifei/post/phd-resource/" class="summary-link">
+          <div class="article-style">
+            A growing resource list that I find helpful for research and navigating through PhD and some questions I get asked frequently.
+          </div>
+        </a>
+        
+
+        
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+    
+  
+
+  
+  
+  
+
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="media" class="home-section wg-blank  " style="padding: 10px 0 0px 0;">
+   <div class="home-section-bg "></div>
+    <div class="container">
+
+    
+      <div class="row  justify-content-center">
+      
+        
+          <div class="section-heading col-12 mb-3 text-center">
+            <h1 class="mb-0">Media Coverage</h1>
+            
+          </div>
+        
+      
+    
+
+       
+
+
+
+
+
+
+  <div class="col-12">
+    <p><a href="https://news.mit.edu/2022/computational-tool-fluidic-devices-1209" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://news.mit.edu/2022/computational-tool-fluidic-devices-1209" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img src="./Yifei Li_files/mitnews2.png" alt="" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://news.mit.edu/2022/computational-tool-fluidic-devices-1209" target="_blank" rel="noopener">
+</a><p></p>
+<div class="row">
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://news.mit.edu/2022/computational-tool-fluidic-devices-1209" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://news.mit.edu/2022/computational-tool-fluidic-devices-1209" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/mitnews2_hu41b30c7e2ec8db12054dfaac5407f099_40935_86e693b31cf3ca5ffde1886137b4ee96.png 400w,
+               /liyifei/media/mediacoverage/mitnews2_hu41b30c7e2ec8db12054dfaac5407f099_40935_8a42a62a69bf1d285c7cadeeff9395d3.png 760w,
+               /liyifei/media/mediacoverage/mitnews2_hu41b30c7e2ec8db12054dfaac5407f099_40935_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/mitnews2_hu41b30c7e2ec8db12054dfaac5407f099_40935_86e693b31cf3ca5ffde1886137b4ee96.png" width="648" height="194" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://news.mit.edu/2022/computational-tool-fluidic-devices-1209" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://phys.org/news/2022-12-fluidic-devices.html" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://phys.org/news/2022-12-fluidic-devices.html" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/physorg_hu02b76b57fc78ddd37351316ff4c12134_60295_e8704882cc33910f1aa9afd905e26570.png 400w,
+               /liyifei/media/mediacoverage/physorg_hu02b76b57fc78ddd37351316ff4c12134_60295_cfc0c39c73a08235dcb304f43b57db05.png 760w,
+               /liyifei/media/mediacoverage/physorg_hu02b76b57fc78ddd37351316ff4c12134_60295_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/physorg_hu02b76b57fc78ddd37351316ff4c12134_60295_e8704882cc33910f1aa9afd905e26570.png" width="760" height="199" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://phys.org/news/2022-12-fluidic-devices.html" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://cacm.acm.org/news/267699-computational-system-streamlines-design-of-fluidic-devices/fulltext?mobile=false" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://cacm.acm.org/news/267699-computational-system-streamlines-design-of-fluidic-devices/fulltext?mobile=false" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/CACM_hu9d97dc3f67f8b90ac30bf83edf197ec7_29164_e9d4e9a04dd64a4516bc31b818880423.png 400w,
+               /liyifei/media/mediacoverage/CACM_hu9d97dc3f67f8b90ac30bf83edf197ec7_29164_2e4f6c74382f37c6c2a4554467f409eb.png 760w,
+               /liyifei/media/mediacoverage/CACM_hu9d97dc3f67f8b90ac30bf83edf197ec7_29164_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/CACM_hu9d97dc3f67f8b90ac30bf83edf197ec7_29164_e9d4e9a04dd64a4516bc31b818880423.png" width="511" height="147" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://cacm.acm.org/news/267699-computational-system-streamlines-design-of-fluidic-devices/fulltext?mobile=false" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://www.imeche.org/news/news-article/mit-system-could-auto-generate-engine-designs" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://www.imeche.org/news/news-article/mit-system-could-auto-generate-engine-designs" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/imeche_huc574696102fff097210f2eea539d0564_146482_faeaeb6e28fe42d11182edccc05e54f5.png 400w,
+               /liyifei/media/mediacoverage/imeche_huc574696102fff097210f2eea539d0564_146482_58b79c7847f1c006d34ba6a8ccc600af.png 760w,
+               /liyifei/media/mediacoverage/imeche_huc574696102fff097210f2eea539d0564_146482_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/imeche_huc574696102fff097210f2eea539d0564_146482_faeaeb6e28fe42d11182edccc05e54f5.png" width="760" height="251" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://www.imeche.org/news/news-article/mit-system-could-auto-generate-engine-designs" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://www.sciencedaily.com/releases/2022/12/221208174306.htm" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://www.sciencedaily.com/releases/2022/12/221208174306.htm" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/sciencedaily_hu66a2db08c80930e92ede8c9a5049241e_10116_8172dab66ec16eed122b60c25b3a6ad8.png 400w,
+               /liyifei/media/mediacoverage/sciencedaily_hu66a2db08c80930e92ede8c9a5049241e_10116_2c18d87de60e6a674763ab5d367dab6a.png 760w,
+               /liyifei/media/mediacoverage/sciencedaily_hu66a2db08c80930e92ede8c9a5049241e_10116_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/sciencedaily_hu66a2db08c80930e92ede8c9a5049241e_10116_8172dab66ec16eed122b60c25b3a6ad8.png" width="600" height="100" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://www.sciencedaily.com/releases/2022/12/221208174306.htm" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://towardsdatascience.com/bring-your-childhood-drawings-to-life-within-seconds-a-demo-of-metas-creative-ai-1e8695d9f3b6" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://towardsdatascience.com/bring-your-childhood-drawings-to-life-within-seconds-a-demo-of-metas-creative-ai-1e8695d9f3b6" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/tds_hude3f681786dca044a19817f8866a9205_24962_fe0e655f11bb7b5e90b3fb35ef5d110b.png 400w,
+               /liyifei/media/mediacoverage/tds_hude3f681786dca044a19817f8866a9205_24962_49841d90083f766ebb52a577a86a0f1b.png 760w,
+               /liyifei/media/mediacoverage/tds_hude3f681786dca044a19817f8866a9205_24962_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/tds_hude3f681786dca044a19817f8866a9205_24962_fe0e655f11bb7b5e90b3fb35ef5d110b.png" width="460" height="143" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://towardsdatascience.com/bring-your-childhood-drawings-to-life-within-seconds-a-demo-of-metas-creative-ai-1e8695d9f3b6" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+</div>
+<div class="row">
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://www.engadget.com/meta-has-open-sourced-an-ai-project-that-turns-your-doodles-into-animations-183807106.html" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://www.engadget.com/meta-has-open-sourced-an-ai-project-that-turns-your-doodles-into-animations-183807106.html" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/engadget_hub26314031f985de637d3d349e01f2f45_14196_88a4cdd0092324fdc2642f6dab7f0107.png 400w,
+               /liyifei/media/mediacoverage/engadget_hub26314031f985de637d3d349e01f2f45_14196_0ae26feb62cf4ac3b8e57b71b0f4ad1c.png 760w,
+               /liyifei/media/mediacoverage/engadget_hub26314031f985de637d3d349e01f2f45_14196_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/engadget_hub26314031f985de637d3d349e01f2f45_14196_88a4cdd0092324fdc2642f6dab7f0107.png" width="760" height="165" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://www.engadget.com/meta-has-open-sourced-an-ai-project-that-turns-your-doodles-into-animations-183807106.html" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://www.businesstoday.in/technology/news/story/metas-new-ai-project-turns-doodles-into-animated-figures-377361-2023-04-14" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://www.businesstoday.in/technology/news/story/metas-new-ai-project-turns-doodles-into-animated-figures-377361-2023-04-14" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img src="./Yifei Li_files/bt.png" alt="" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://www.businesstoday.in/technology/news/story/metas-new-ai-project-turns-doodles-into-animated-figures-377361-2023-04-14" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+  <div class="media_coverage item">
+  <span>
+<p><a href="https://medium.com/mlearning-ai/this-is-how-im-using-ai-to-animate-my-daughter-s-drawings-7f80e6d80005" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a></p><figure><a href="https://medium.com/mlearning-ai/this-is-how-im-using-ai-to-animate-my-daughter-s-drawings-7f80e6d80005" target="_blank" rel="noopener">
+  <div class="d-flex justify-content-center">
+    <div class="w-100"><img alt="" srcset="
+               /liyifei/media/mediacoverage/medium_hue9efecc3b64e0a20dccdcccaf4272bef_19235_b0169b40bb20ab62cbb5e44c918a07b5.png 400w,
+               /liyifei/media/mediacoverage/medium_hue9efecc3b64e0a20dccdcccaf4272bef_19235_4662c900f1a6a60beb3942987e57b623.png 760w,
+               /liyifei/media/mediacoverage/medium_hue9efecc3b64e0a20dccdcccaf4272bef_19235_1200x1200_fit_lanczos_3.png 1200w" src="./Yifei Li_files/medium_hue9efecc3b64e0a20dccdcccaf4272bef_19235_b0169b40bb20ab62cbb5e44c918a07b5.png" width="760" height="146" loading="lazy" data-zoomable="" class="medium-zoom-image"></div>
+  </div></a></figure><a href="https://medium.com/mlearning-ai/this-is-how-im-using-ai-to-animate-my-daughter-s-drawings-7f80e6d80005" target="_blank" rel="noopener">
+</a><br>
+</span><p></p>
+  </div>
+</div>
+  </div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="contact" class="home-section wg-contact  " style="padding: 30px 0 50px 0;">
+   <div class="home-section-bg "></div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Contact</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-12 col-lg-8">
+  
+
+  
+
+  <ul class="fa-ul">
+
+    
+    <li>
+      <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
+      <span id="person-email"><a href="mailto:liyifei@csail.mit.edu">liyifei@csail.mit.edu</a></span>
+    </li>
+    
+
+    
+
+    
+    
+      
+      <li>
+        <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
+        <span id="person-address">MIT CSAIL, Cambridge, MA 02139</span>
+      </li>
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+  </ul>
+
+  
+  <div class="d-none">
+    <input id="map-provider" value="mapnik">
+    <input id="map-lat" value="42.3616">
+    <input id="map-lng" value="-71.090">
+    <input id="map-dir" value="MIT CSAIL, Cambridge, MA 02139">
+    <input id="map-zoom" value="15">
+    <input id="map-api-key" value="">
+  </div>
+  <div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./Yifei Li_files/12119.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(100px, 15px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/15/9913/12119.png" class="leaflet-tile" style="width: 256px; height: 256px; transform: translate3d(356px, 15px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12118.png" class="leaflet-tile" style="width: 256px; height: 256px; transform: translate3d(100px, -241px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12118(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(356px, -241px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12120.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(100px, 271px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12120(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(356px, 271px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12119(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-156px, 15px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12119(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(612px, 15px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12118(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-156px, -241px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12118(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(612px, -241px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12120(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-156px, 271px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Yifei Li_files/12120(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(612px, 271px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./Yifei Li_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(415px, 175px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="./Yifei Li_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(415px, 175px, 0px); z-index: 175;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(2.53779e+06px, 3.10262e+06px, 0px) scale(16384);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://people.csail.mit.edu/liyifei/#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="https://people.csail.mit.edu/liyifei/#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div></div></div></div>
+  
+
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    © 2023 Yifei Li | 君子不器
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="https://people.csail.mit.edu/liyifei/#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="https://people.csail.mit.edu/liyifei/#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+             
+</div>
 </html>
