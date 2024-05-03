@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Fabricable Dihedral</title>
+<link rel="stylesheet" type="text/css" href="./files/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="./files/orbit-1.2.3.css" media="screen">
+<link rel="stylesheet" type="text/css" href="./files/jquery.fancybox-1.3.4.css" media="screen">
+<!--[if lt IE 9]><script type="text/javascript" src="assets/scripts/modernizr.js"></script><![endif]-->
+<style type="text/css">#lb_infobar_3436182992{color:#000000 !important;font-weight:normal !important;text-decoration:none !important;margin-top:0 !important;margin-bottom:0 !important;margin-left:0 !important;margin-right:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-left:0 !important;padding-right:0 !important;float:none !important;text-align:left !important;height:37px !important;width:100% !important;background-color:#F5F5F5 !important;background-image:-webkit-linear-gradient(top,#F5F5F5,#EEEDED) !important;border-bottom:1px solid #C0C0C0 !important;box-shadow:inset 0 1px 1px 1px #FFFFFF !important;line-height:36px !important;font-family:'微软雅黑','宋体' !important;z-index:9999999999 !important;margin:0 !important;padding:0 !important;position:fixed !important;top:0px !important;left:0px !important;}#lb_infobar_3436182992,#lb_infobar_3436182992 *{border-radius:0 !important;padding:0 !important;margin:0 !important;}#lb_infobar_3436182992 *{width:auto !important;background:none !important;}#lb_infobar_3436182992 input{border-radius:4px !important;box-shadow:0 1px 2px rgba(0,0,0,.15) !important;font-family:'微软雅黑,','宋体' !important;font-size:12px !important;font-weight:normal !important;text-shadow:none !important;margin:0 0 0 18px !important;padding:0 !important;}#lb_infobar_translate_3436182992{background-color:#FBB016 !important;background-image:-webkit-linear-gradient(top,#FBB016,#ED8A0D) !important;width:78px !important;height:26px !important;border:1px solid #E19D3C !important;color:#FFFFFF !important;cursor:pointer !important;line-height:normal !important;vertical-align:middle !important;}#lb_infobar_translate_3436182992:hover{background-color:#FDBF3F !important;background-image:-webkit-linear-gradient(top,#FDBF3F,#ED8A0D) !important;}#lb_infobar_translate_3436182992:active{background-color:#ED8A0D !important;background-image:-webkit-linear-gradient(top,#ED8A0D,#FBB016) !important;}#lb_infobar_words_3436182992{background-color:#FBB016 !important;background-image:-webkit-linear-gradient(top,#FBB016,#ED8A0D) !important;width:90px !important;height:26px !important;border:1px solid #E19D3C !important;color:#FFFFFF !important;cursor:pointer !important;line-height:normal !important;vertical-align:middle !important;left:360px !important;}#lb_infobar_words_3436182992:hover{background-color:#FDBF3F !important;background-image:-webkit-linear-gradient(top,#FDBF3F,#ED8A0D) !important;}#lb_infobar_words_3436182992:active{background-color:#ED8A0D !important;background-image:-webkit-linear-gradient(top,#ED8A0D,#FBB016) !important;}#lb_infobar_return_3436182992{background-color:#FFFFFF !important;background-image:-webkit-linear-gradient(top,#FFFFFF,#E0DFDF) !important;width:78px !important;height:26px !important;border:1px solid #B0AFAF !important;color:rgba(0,0,0,.5) !important;cursor:pointer !important;line-height:normal !important;vertical-align:middle !important;}#lb_infobar_return_3436182992.lb_infobar_return_words_3436182992{width:130px !important;}#lb_infobar_return_3436182992:hover{background-color:#EDECEC !important;background-image:-webkit-linear-gradient(top,#FFFFFF,#EDECEC) !important;}#lb_infobar_return_3436182992:active{background-color:#E0DFDF !important;background-image:-webkit-linear-gradient(top,#E0DFDF,#FFFFFF) !important;}#lb_infobar_3436182992 a{text-decoration:underline !important;font-size:12px !important;color:#999999 !important;cursor:pointer !important;}#lb_infobar_3436182992 a:hover{color:#FC9500 !important;}#lb_infobar_3436182992 a:active{color:#D68003 !important;}#lb_infobar_close_3436182992{background-position:-66px -27px !important;cursor:pointer !important;position:absolute !important;top:0 !important;right:1em !important;line-height:36px !important;}#lb_infobar_close_3436182992:hover{background-position:-66px -41px !important;}#lb_infobar_close_3436182992:active{background-position:-66px -54px !important;}#lb_infobar_notice_3436182992{line-height:36px !important;margin-left:55px !important;font-size:14px !important;vertical-align:middle !important;}#lb_infobar_powered_3436182992{padding-left:18px !important;font-size:10px !important;color:#979797 !important;font-family:'Arial' !important;font-style:italic !important;}#lb_infobar_ignore_3436182992{line-height:36px !important;margin-right:3em !important;position:absolute !important;top:0 !important;right:0 !important;}#lb_infobar_manual_3436182992{line-height:36px !important;margin-right:12em !important;position:absolute !important;top:0 !important;right:0 !important;}#lb_infobar_icon_3436182992{position:absolute !important;top:0 !important;left:0 !important;height:37px !important;width:42px !important;color:#fff !important;font-size:24px !important;text-align:center !important;background-repeat:no-repeat !important;background-position:-80px 0 !important;}#lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992,#lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992{background-color:#FFFFFF !important;background-image:-webkit-linear-gradient(top,#FFFFFF,#E0DFDF) !important;border:1px solid #B0AFAF !important;color:#808080 !important;}#lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,#lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:hover{background-color:#EDECEC !important;background-image:-webkit-linear-gradient(top,#FFFFFF,#EDECEC) !important;}#lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,#lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:active{background-color:#E0DFDF !important;background-image:-webkit-linear-gradient(top,#E0DFDF,#FFFFFF) !important;}#lb_infobar_hover_3436182992:before{content:" " !important;position:absolute !important;border:5px solid transparent !important;border-top:5px solid #000 !important;bottom: -10px !important;left: 50% !important;}#lb_infobar_hover_3436182992:after{content:" " !important;position:absolute !important;border:5px solid transparent !important;border-top:5px solid #fff !important;bottom: -9px !important;left: 50% !important;}#lb_infobar_hover_3436182992{line-height:1.2 !important;font-size:12px !important;min-width:150px !important;position:fixed !important;background:#fff !important;border:1px solid #333 !important;border-radius:3px !important;padding:10px !important;color:#333 !important;z-index:9999999999 !important;}#lb_infobar_hover_3436182992.lb_infobar_hover_below:before{content:" " !important;position:absolute !important;border:5px solid transparent !important;border-bottom:5px solid #000 !important;top:-10px !important;left:50% !important;bottom:auto !important;}#lb_infobar_hover_3436182992.lb_infobar_hover_below:after{content:" " !important;position:absolute !important;border:5px solid transparent !important;border-bottom:5px solid #fff !important;top: -9px !important;left: 50% !important;bottom:auto !important;}</style></head>
+<body style="margin-top: 38px !important; position: relative !important;">
+
+<div class="wrapper">
+  <header>
+    <h1>Fabricable Dihedral Escher Tessellations</h1>
+	<p class="session">CAD 2020 (Presented on SPM 2020)</p>
+	<p class="author">
+        <a href="http://baidu.com/" target="_blank">Xiaokang Liu</a><sup>a</sup>&nbsp;&nbsp;&nbsp;
+        <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a><sup>a</sup>&nbsp;&nbsp;&nbsp;
+        <a href="http://www.cs.bgu.ac.il/~asharf" target="_blank">Andrei Sharf</a><sup>b</sup>&nbsp;&nbsp;&nbsp;
+        <a href="" target="_blank">Xin Yan</a><sup>a</sup>&nbsp;&nbsp;&nbsp;		
+        <a href="http://www.cs.huji.ac.il/~danix/" target="_blank">Dani Lischinski</a><sup>c</sup>&nbsp;&nbsp;&nbsp;
+		<a href="http://irc.cs.sdu.edu.cn/info/1007/1370.htm" target="_blank">Changhe Tu</a><sup>a</sup>
+    </p>
+	<br>
+
+	  <p class="school">
+		<sup>a</sup><a href="http://en.sdu.edu.cn/" target="_blank">Shandong University</a>&nbsp;&nbsp;
+		<sup>b</sup><a href="http://in.bgu.ac.il/en/Pages/default.aspx" target="_blank">Ben-Gurion University of the Negev</a>&nbsp;&nbsp;
+		<sup>c</sup><a href="http://new.huji.ac.il/en" target="_blank">Hebrew University of Jerusalem</a>&nbsp;&nbsp;
+		
+</p>
+	  <br>
+  </header>
+
+  <section id="home">
+    <div class="row"style="text-align:center;">
+		<img src="./files/teaser.png" height="280" alt="">
+    </div>
+	<center>
+	    <p>
+		The dual patterns produce interesting light and shadow effects, which imply a great potential for designing customized lampshades.
+	    </p>
+	</center>
+	<p><span><o:p>&nbsp;</o:p></span></p>
+  </section>
+  
+  <section id="abstract">
+    <h3 class="title">Abstract</h3> <br>
+    <div class="row">
+        <p><span class="dropcap">T</span>he growing popularity of 3D digital manufacturing has spurred a high demand for accessible methods for designing and fabricating
+customized 3D objects. In this paper, we present a novel approach to model and fabricate Escher dual-shape tilings from user-defined
+shapes. In a nutshell, Escher’s dual shape tiling method smoothly transforms one tile pattern into another, generating a dual perception
+effect of the two shapes. We adapt Escher’s dual shape tiling and perception effect to 3D manufacturing. Thus, our method takes two
+user-defined shapes and computes their dual shape tiling. A key feature of our method is that the dual shape patterns utilize solid
+and hollow space simultaneously. Specifically, our technique maps one shape to solid structure, while the second shape is mapped to
+hollow background, optimizing both spaces and bringing higher utilization of materials. To conform with 3D printability requirements,
+our tiling computation accounts for connectivity and strength as well as dense packing for effciency. Our dual shape tiling algorithm
+gives rise to novel manufacturing applications such as ornamental texturing with dual perception Escher patterns, decorative window
+blinds, flexible tiling patterns, and shade effects.<br><br>
+
+  </p>
+        <br>
+      </div>
+    <div class="row">
+   
+  
+  </div></section>
+
+  <!--
+  <section id="vid">
+    <h3 class="title">Video</h3><br>
+	<div style="text-align:center;">
+		<video width="750" controls="controls">
+			<source src="./files/3DLamps.mov">
+			Your browser does not support HTML5 video.You could download the video in download part.
+		</video>	
+	</div>
+  <p><span><o:p>&nbsp;</o:p></span></p>
+  </section>
+  -->
+
+  <section id="home">
+   <h3 class="title">Dihedral Tessellation</h3><br>
+    <div class="row"style="text-align:center;">
+		<img src="./files/tess_result.png" height="450" alt="">
+    </div>
+	<center>	
+	    <p>
+        Various dual-shape tiling patterns generated by our system.
+		</p>
+	</center>
+    <p><span><o:p>&nbsp;</o:p></span></p>
+  </section>
+  
+  <section id="home">
+   <h3 class="title">Fabricable models</h3><br>
+    <div class="row"style="text-align:center;">
+		<img src="./files/fabricated.png" height="280" alt="">
+    </div>
+	<center>	
+	    <p>
+		Applying our printable Escher dual-shape tilings onto the 3D kitten.
+		</p>
+	</center>
+    <p><span><o:p>&nbsp;</o:p></span></p>
+  </section>
+  
+  <section id="downloads">
+    <h3 class="title">Downloads</h3>
+    <div class="row">	
+	<p><span><o:p>&nbsp;</o:p></span></p>	
+		<table align="center" border="0" class="list">
+			<tbody><tr>
+			    <td width="100" align="center"><a href="./files/DihedralTessellation.pdf"> <img width="80" id="_x0000_i10320" src="./files/paperpic.png" alt="1">  </a></td>	
+				<!--td width="100" align="center"><a href="./files/FabricableDihedral.pptx"> <img width="80" id="_x0000_i10320" src="./files/slidespic.png" alt="1">  </a></td>-->
+				<td width="100" align="center"><a href="./files/Dataset.zip"> <img width="80" id="_x0000_i10320" src="./files/dataset.png" alt="1">  </a></td>
+				<td width="100" align="center"><a href="./files/swan_flower.stl"> <img width="80" id="_x0000_i10320" src="./files/swan_flower.png" alt="1">  </a></td>	
+				<td width="100" align="center"><a href="./files/twobirds.stl"> <img width="80" id="_x0000_i10320" src="./files/twobirds.png" alt="1">  </a></td>	
+				<td width="100" align="center"><a href="./files/swan_bird.stl"> <img width="80" id="_x0000_i10320" src="./files/swan_bird.png" alt="1">  </a></td>	
+				<td width="100" align="center"><a href="./files/bat_fish.stl"> <img width="80" id="_x0000_i10320" src="./files/bat_fish.png" alt="1">  </a></td>	
+			</tr>
+			
+			<tr>
+			    <td width="100" align="center"><a href="./files/DihedralTessellation.pdf"> Paper (33.3M) </a></td>
+				<td width="100" align="center"><a href="./files/Dataset.zip"> Dataset (2.18M)</a></td>
+				<td width="100" align="center"><a href="./files/swan_flower.stl"> swan_flower.stl (28.4M)</a></td>
+				<td width="100" align="center"><a href="./files/twobirds.stl"> two_birds.stl (28.3M)</a></td>
+				<td width="100" align="center"><a href="./files/swan_bird.stl"> swan_bird.stl (28.6M)</a></td>
+				<td width="100" align="center"><a href="./files/bat_fish.stl">  bat_fish.stl (24.0M)</a></td>
+			</tr>
+		</tbody></table>
+    </div>   
+	
+	<div class="row">	
+	
+    </div> 
+  <p><span><o:p>&nbsp;</o:p></span></p>
+  </section>
+
+ <section id="acknowledgement">
+    <h3 class="title">Acknowledgement<br>
+      <span>
+      <o:p></o:p>
+    </span></h3>
+	<div class="row">
+      <p><span class="dropcap">W</span>e thank all the anonymous reviewers for their valuable
+suggestions. This work is supported by grants from NSFC
+(61972232, 61772318) and State Key Laboratory of Virtual Reality
+Technology and Systems (VRLAB2019A01).
+	  
+	  </p>
+  <p><span><o:p>&nbsp;</o:p></span></p>
+</div></section>
+
+  <section id="bibtex">
+    <h3 class="title">BibTex</h3><br>
+    
+   <div class="row"><p>
+
+ 
+   </p>
+  <p><span><o:p>&nbsp;</o:p></span></p>
+  </div> 
+  
+  </section>
+
+  <footer></footer>
+</div>
+</body></html>
