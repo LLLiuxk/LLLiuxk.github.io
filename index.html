@@ -1,1178 +1,912 @@
 <!DOCTYPE html>
-<pre id="txt-content"></pre>
-<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="Wowchemy 5.3.0 for Hugo">
-  <meta name="author" content="Xiaokang Liu">
+<html lang="en">
 
-  <meta name="description" content="Xiaokang Liu. Computer science PhD student at Shandong University IRC working in computer graphics">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <meta name="theme-color" content="#07BDC7">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Xiaokang Liu — CS Postdoctor at Shandong University, working in Computer Graphics, Intelligent Manufacturing, and Computational Design & Fabrication.">
+    <meta name="author" content="Xiaokang Liu">
+    <title>Xiaokang Liu</title>
+    <link rel="icon" type="image/png" href="./index_files/icon.jpg">
 
-<!--     
-    <link rel="stylesheet" href="./Yifei Li_files/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous" media="all" onload="this.media=&#39;all&#39;">
-      <link rel="stylesheet" href="./Yifei Li_files/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="all" onload="this.media=&#39;all&#39;">
-          <link rel="stylesheet" href="./Yifei Li_files/github.min.css" crossorigin="anonymous" title="hl-light" media="all" onload="this.media=&#39;all&#39;">
-          <link rel="stylesheet" href="./Yifei Li_files/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media=&#39;all&#39;" disabled="">
-      <link rel="stylesheet" href="./Yifei Li_files/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="all" onload="this.media=&#39;all&#39;">
-        <script src="./Yifei Li_files/tex-chtml.js.下载" integrity="" crossorigin="anonymous" async=""></script>
-      <link rel="stylesheet" href="./Yifei Li_files/css"> -->
-  <link rel="stylesheet" href="./index_files/wowchemy.css">
+    <style>
+        /* ===== Reset & Base ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- <script async="" src="./Yifei Li_files/js(1)"></script> -->
-<script>
-  window.dataLayer = window.dataLayer || [];
+        html {
+            scroll-behavior: smooth;
+            font-size: 17px;
+        }
 
-  function gtag() {
-      dataLayer.push(arguments);
-  }
+        body {
+            font-family: 'Consolas', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            transition: border-color 0.3s ease, opacity 0.3s ease;
+        }
 
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
+        a:hover {
+            border-bottom-color: #1a1a1a;
+            opacity: 0.7;
+        }
 
-  gtag('js', new Date());
-  gtag('config', 'UA-131144885-1', {});
-  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-  
-  document.addEventListener('click', onClickCallback, false);
+        ::selection {
+            background: #1a1a1a;
+            color: #fff;
+        }
 
+        /* ===== Layout ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
 
-</script>
+        /* ===== Navigation ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(248, 248, 248, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.3s ease;
+        }
 
-  
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
-    <!-- <link rel="alternate" href="https://people.csail.mit.edu/liyifei/index.xml" type="application/rss+xml" title="Yifei Li">
-  
-    <link rel="manifest" href="https://people.csail.mit.edu/liyifei/manifest.webmanifest"> -->
-  <link rel="icon" type="image/png" href="./index_files/icon.jpg">
-  <link rel="apple-touch-icon" type="image/png" href="./index_files/icon.jpg">
+        .nav.scrolled {
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+        }
 
-  <!-- <link rel="canonical" href="https://people.csail.mit.edu/liyifei/"> -->
-  
- 
-<!-- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://people.csail.mit.edu/liyifei/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "url": "https://people.csail.mit.edu/liyifei/"
-}
-</script> -->
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
 
-<title>Xiaokang Liu</title>
-<style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
-@keyframes caretBlink {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
-}
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: -0.02em;
+            border: none;
+        }
 
-@keyframes rotateSpinner {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
+        .nav-brand:hover {
+            opacity: 0.6;
+        }
 
-#text-tool-caret {
-    animation-name: caretBlink;  
-    animation-iteration-count: infinite;  
-    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-    animation-duration: 1s; 
-}
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
 
-#en-markup-loading-spinner {
-    position: absolute;
-    top: calc(50% - 16px);
-    left: calc(50% - 16px);
-    width: 32px;
-    height: 32px;
-}
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border: none;
+            color: #555;
+            transition: color 0.3s ease;
+        }
 
-#en-markup-loading-spinner img {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    animation-name: rotateSpinner;
-    animation-duration: 0.6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
-.skitchToastBoxContainer {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 30px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    pointer-events: none;
-}
+        .nav-links a:hover {
+            color: #1a1a1a;
+            opacity: 1;
+        }
 
-.skitchToastBox {
-    width: 200px;
-    height: 16px;
-    padding: 12px;
-    background-color: rgba(47, 55, 61, 0.95);
-    border-radius: 4px;
-    color: white;
-    cursor: default;
-    font-size: 10pt;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.32);
-    font-family: 'Soleil', Helvetica, Arial, sans-serif;
-    border: 2px rgba(255, 255, 255, 0.38) solid;
-}
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
 
-.lang-zh-cn .skitchToastBox {
-    font-family: '微软雅黑', 'Microsoft YaHei', SimSun,
-        '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic', 'Soleil',
-        Helvetica, Arial, sans-serif;
-}
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #1a1a1a;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
 
-.lang-ja-jp .skitchToastBox {
-    font-family: '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic',
-        '微软雅黑', 'Microsoft YaHei', SimSun, 'Soleil', Helvetica, Arial,
-        sans-serif;
-}
+        /* ===== Hero / About ===== */
+        .hero {
+            padding: 110px 0 50px;
+        }
 
-.skitchToast {
-    padding-left: 20px;
-    padding-right: 20px;
-    display: inline-block;
-    height: 10px;
-    color: #f1f5f8;
-    text-align: center;
-}
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 48px;
+            align-items: start;
+        }
 
-.skitchVisible {
-    /* Don't remove this class it's a hack used by the Evernote Clipper */
-}
-</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+        .avatar-wrapper {
+            position: relative;
+        }
 
+        .avatar {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
 
-</style><style type="text/css">/* Copyright 2019-present Evernote Corporation. All rights reserved. */
+        .avatar:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
 
-#en-markup-disabled {
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    cursor: default;
-    -webkit-user-select: none;
-}
+        .hero-info h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
 
-#en-markup-alert-container {
-    position: absolute;
-    z-index: 9999;
-    width: 450px;
-    left: calc(50% - 225px);
-    top: calc(50% - 85px);
-    background-color: white;
-    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.35);
-    -webkit-user-select: none;
-}
+        .hero-info .subtitle {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 14px;
+        }
 
-#en-markup-alert-container .cell-1 {
-    position: relative;
-    height: 110px;
-    width: 105px;
-    float: left;
-    text-align: center;
-    background-image: url(data:image/png;base64,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);
-    background-position: 65% 50%;
-    background-repeat: no-repeat;
-}
+        .hero-info .bio {
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.75;
+            margin-bottom: 22px;
+        }
 
-#en-markup-alert-container .cell-2 {
-    position: relative;
-    float: left;
-    width: 345px;
-    margin-top: 29px;
-    margin-bottom: 20px;
-}
+        .hero-info .bio a {
+            font-weight: 700;
+        }
 
-#en-markup-alert-container .cell-2 .cell-2-title {
-    margin-bottom: 5px;
-    padding-right: 30px;
-    font-size: 12pt;
-    font-family: Tahoma, Arial;
-}
+        .hero-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
 
-#en-markup-alert-container .cell-2 .cell-2-message {
-    padding-right: 30px;
-    font-size: 9.5pt;
-    font-family: Tahoma, Arial;
-}
+        .hero-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            color: #333;
+        }
 
-#en-markup-alert-container .cell-3 {
-    position: relative;
-    width: 450px;
-    height: 60px;
-    float: left;
-    background-color: rgb(240,240,240);
-}
+        .hero-links a:hover {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #1a1a1a;
+            opacity: 1;
+        }
 
-#en-markup-alert-container .cell-3 button {
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    width: 110px;
-    height: 36px;
-}
+        .hero-links a svg {
+            width: 16px;
+            height: 16px;
+        }
 
-#en-markup-alert-container .cell-3 button.alt-button {
-    position: absolute;
-    top: 12px;
-    right: 140px;
-    width: 110px;
-    height: 36px;
-}
-</style>
+        /* ===== Columns: Interests & Education ===== */
+        .info-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            padding: 24px 0 12px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .info-columns h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .info-columns ul {
+            list-style: none;
+        }
+
+        .info-columns li {
+            font-size: 1rem;
+            color: #333;
+            padding: 2px 0;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 3px 0;
+        }
+
+        .edu-item .school {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #222;
+        }
+
+        .edu-item .degree {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 1px;
+        }
+
+        .edu-item .year {
+            font-size: 0.88rem;
+            color: #666;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        /* ===== Section Headings ===== */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 36px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* ===== Publications ===== */
+        .pub-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 44px;
+            align-items: start;
+        }
+
+        .pub-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pub-thumb {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #eee;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .pub-thumb img {
+            width: 100%;
+            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: grayscale(10%);
+        }
+
+        .pub-thumb:hover img {
+            transform: scale(1.04);
+            filter: grayscale(0%);
+        }
+
+        .pub-thumb a {
+            border: none;
+            display: block;
+        }
+
+        .pub-content h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 5px;
+            letter-spacing: -0.01em;
+        }
+
+        .pub-content h3 a {
+            border: none;
+        }
+
+        .pub-content h3 a:hover {
+            opacity: 0.6;
+        }
+
+        .pub-authors {
+            font-size: 0.82rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        .pub-authors .me {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .pub-venue {
+            font-size: 0.82rem;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .pub-venue strong {
+            color: #444;
+        }
+
+        .pub-venue .award {
+            color: #b8860b;
+            font-weight: 600;
+        }
+
+        .pub-desc {
+            font-size: 0.82rem;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pub-links a {
+            display: inline-block;
+            padding: 4px 12px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #555;
+            transition: all 0.25s ease;
+        }
+
+        .pub-links a:hover {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #1a1a1a;
+            opacity: 1;
+        }
+
+        /* ===== Contact ===== */
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 0;
+            font-size: 0.92rem;
+            color: #444;
+        }
+
+        .contact-list li svg {
+            width: 20px;
+            height: 20px;
+            color: #999;
+            flex-shrink: 0;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            text-align: center;
+            font-size: 0.78rem;
+            color: #bbb;
+            letter-spacing: 0.02em;
+        }
+
+        /* ===== Scroll Animations ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+
+            .avatar-wrapper {
+                margin: 0 auto;
+            }
+
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hero-info h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-links {
+                justify-content: center;
+            }
+
+            .info-columns {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .edu-item {
+                flex-direction: column;
+            }
+
+            .edu-item .year {
+                margin-left: 0;
+                margin-top: 2px;
+            }
+
+            .pub-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .pub-thumb {
+                max-width: 100%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(248, 248, 248, 0.98);
+                backdrop-filter: blur(16px);
+                padding: 24px 32px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            }
+        }
+    </style>
 </head>
 
+<body>
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper">
-
-  
-
-  
-
-
-
-<div class="page-header">
- 
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container-xl">
-
-    
-    <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="https://llliuxk.github.io/">Xiaokang Liu</a>
-    </div>
-    
-
-    
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-bars"></i></span>
-    </button>
-
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-      
-      <ul class="navbar-nav d-md-inline-flex">
-        <li class="nav-item">
-          <a class="nav-link active" href="./index.html#about" data-target="#about"><span>Home</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html#featured" data-target="#featured"><span>Publications</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html#experience" data-target="#experience"><span>Experience</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html#contact" data-target="#contact"><span>Contact</span></a>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">    </ul>
-  </div>
-</nav>
-</div>
-
-
-
-<div class="page-body">
-<span class="js-widget-page d-none"></span>
-
-<section id="about" class="home-section wg-about  " style="padding: 30px 0 50px 0;">
-   <div class="home-section-bg "></div>
-    <div class="container">
-
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      <img class="avatar avatar-circle" width="1900" height="1900" src="./index_files/person.jpg" alt="Xiaokang Liu">
-      <div class="portrait-title">
-        <h2>Xiaokang Liu</h2>
-        <h3>刘晓康 | CS Postdoctor</h3>
-        <h3>        
-            <span>Shandong University</span>           
-        </h3>
-        <h3> <a href="mailto:lxk811@gmail.com">lxk811@gmail.com</a>          
-      </h3>     
-      <h3> <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=soqXRVkAAAAJ">Google Scholar Page</a>          
-      </h3>   
-      </div>
-
-      <ul class="network-icon" aria-hidden="true">
-
-        <li>
-          <a href="https://scholar.google.com/citations?user=N4ejGnoAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="google-scholar">
-            <i class="ai ai-google-scholar big-icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/omegaiota" target="_blank" rel="noopener" aria-label="github">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-
-        <li>
-          <a href="https://people.csail.mit.edu/liyifei/uploads/cv-0424.pdf" aria-label="cv">
-            <i class="ai ai-cv big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-  
-  <div class="col-12 col-lg-8">
-    <div class="article-style">
-      <p>I am a PhD graduate at <a href="https://irc.cs.sdu.edu.cn/" target="_blank">Interdisciplinary Research Center(IRC)</a> of Shandong University.
-      My supervisor is <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Prof. Changhe Tu</a> and my co-supervisor is <a href="https://irc.cs.sdu.edu.cn/~lulin/index.html" target="_blank">Prof. Lin Lu</a>.
-      I was fortunate to be awarded the first prize for the best paper at the Symposium on Solid and Physical Modeling (SPM 2020). 
-      Now I am working as a postdoc with <a href="http://cfcs.pku.edu.cn/baoquan/" target="_blank">Prof. Baoquan Chen</a> at Peking University.
-      <p>In my spare time, I enjoy basketball, animation and computer games.
-
-    </div>
-
-    <div class="row">
-
-      
-      <div class="col-md-5">
-        <div class="section-subheading">Interests</div>
-        <ul class="ul-interests mb-0">
-          
-          <li>Computer Graphics</li>
-          
-          <li>Intelligent Manufacturing</li>
-          
-          <li>Computational Design &amp; Fabrication</li>
-          
-        </ul>
-      </div>
-
-      <div class="col-md-7">
-        <div class="section-subheading">Education</div>
-        <ul class="ul-interests mb-0">
-          
-          <li>
-            <p class="institution">Shandong University<span style="float:right;font-size: 0.9rem"> 2019 - 2024</span></p>
-            <p class="course">Ph.D. in Computer Science and Technology&nbsp;</p>
-          </li>
-          
-          <li>
-              <p class="institution">Shandong University<span style="float:right;font-size: 0.9rem"> 2016 - 2019</span></p>
-              <p class="course">M.S. in Software Engineering&nbsp;</p>
-          </li>
-          
-          <li>
-            <p class="institution">Zhengzhou University<span style="float:right;font-size: 0.9rem"> 2012 - 2016</span></p>
-            <p class="course">B.S. in Computer Science and Technology</p>
-          </li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-
-
-<section id="featured" class="home-section wg-featured  " style="padding: 60px 0 100px 0;">
-   <div class="home-section-bg "></div>
-    <div class="container">   
-      <div class="row  justify-content-center">
-      
-        
-          <div class="section-heading col-12 mb-3 text-center">
-            <h1 class="mb-0">Publications</h1><p>
-          </div>
-
-<div class="col-12 ">
-
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5"> 
-      <a href="https://www.sciencedirect.com/science/article/pii/S0010448525001162">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/Principal_ribs.jpg" alt="A Method for Automatically Animating Children’s Drawings of the Human Figure" loading="lazy">
-      </a>
-      
-    </div>
-
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0010448525001162">Principal Stress Field-guided Optimization for Rib Structure Generation</a>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#" class="nav-brand">Xiaokang Liu</a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
+    </nav>
 
-        <div class="stream-meta article-metadata">
-<div class="article-metadata">
-  <div>
-    <span>
-    <a href="https://orcid.org/0009-0009-6203-1850">Longdu Liu</a></span>, <span>
-    <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Xiangjun Wu</a></span>, <span>
-    <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Jiqiang Huang</a></span>, <span></span>
-    <a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a></span>, <span></span>
-    <span class="author-highlighted"> <a href="https://LLLiuxk.github.io/" target="_blank">Xiaokang Liu</a></span>, <span>
-    <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a></span>, <span>
-		<a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a></span>, <span>
+    <!-- Hero / About -->
+    <section id="about" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="avatar-wrapper fade-up">
+                    <img class="avatar" src="./index_files/person.jpg" alt="Xiaokang Liu">
+                </div>
+                <div class="hero-info fade-up">
+                    <h1>Xiaokang Liu</h1>
+                    <p class="subtitle">刘晓康 · CS Postdoctor · Shandong University</p>
+                    <div class="bio">
+                        <p>I am a PhD graduate at the
+                            <a href="https://irc.cs.sdu.edu.cn/" target="_blank">Interdisciplinary Research Center
+                                (IRC)</a>
+                            of Shandong University. My supervisor is
+                            <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Prof. Changhe Tu</a>
+                            and my co-supervisor is
+                            <a href="https://irc.cs.sdu.edu.cn/~lulin/index.html" target="_blank">Prof. Lin Lu</a>.
+                            I was fortunate to be awarded the first prize for the best paper at the Symposium on Solid
+                            and Physical Modeling (SPM 2020).
+                            Now I am working as a postdoc with
+                            <a href="http://cfcs.pku.edu.cn/baoquan/" target="_blank">Prof. Baoquan Chen</a>
+                            at Peking University.
+                        </p>
+                        <p style="margin-top:10px;">In my spare time, I enjoy basketball, animation and computer games.
+                        </p>
+                    </div>
+                    <div class="hero-links">
+                        <a href="mailto:lxk811@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            Email
+                        </a>
+                        <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=soqXRVkAAAAJ" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
+                            Google Scholar
+                        </a>
+                        <a href="https://github.com/LLLiuxk" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16"
+                                height="16">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  </div>
- 
-  <span class="pub-publication">   
-    Computer-Aided Design
-  </span>
-  <span class="middot-divider"></span>
-  <span class="article-date"> 
-    August 2025
-  </span>
-</div>
-</div>     
-<a href="https://doi.org/10.1016/j.cad.2025.103955" class="summary-link">
-  <div class="article-style">
-    A direct computational framework to optimize adaptive rib layouts on freeform surfaces by extracting networks directly from the principal stress field using centroidal Voronoi tessellation. 
-    Furthermore, it optimizes rib cross-sections to minimize material usage while preserving structural integrity, achieving significantly reduced deformation compared to conventional methods
-  </div>
-</a>       
-<div class="btn-links">
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1016/j.cad.2025.103955" target="_blank" rel="noopener">
-  DOI
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>  
-
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5"> 
-      <a href="https://www.sciencedirect.com/science/article/pii/S2214860425001034">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/SPPM.jpg" alt="A Method for Automatically Animating Children’s Drawings of the Human Figure" loading="lazy">
-      </a>
-      
-    </div>
-
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="https://www.sciencedirect.com/science/article/pii/S2214860425001034">Fabricable stochastic periodic porous microstructures: A Wang cube and Gaussian kernel approach</a>
+            <!-- Interests & Education -->
+            <div class="info-columns fade-up">
+                <div>
+                    <h3>Research Interests</h3>
+                    <ul>
+                        <li>Computer Graphics</li>
+                        <li>Intelligent Manufacturing</li>
+                        <li>Computational Design & Fabrication</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Education</h3>
+                    <ul>
+                        <li>
+                            <div class="edu-item">
+                                <div>
+                                    <div class="school">Shandong University</div>
+                                    <div class="degree">Ph.D. in Computer Science and Technology</div>
+                                </div>
+                                <span class="year">2019 – 2024</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="edu-item">
+                                <div>
+                                    <div class="school">Shandong University</div>
+                                    <div class="degree">M.S. in Software Engineering</div>
+                                </div>
+                                <span class="year">2016 – 2019</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="edu-item">
+                                <div>
+                                    <div class="school">Zhengzhou University</div>
+                                    <div class="degree">B.S. in Computer Science and Technology</div>
+                                </div>
+                                <span class="year">2012 – 2016</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="stream-meta article-metadata">
-<div class="article-metadata">
-  <div>
-    <span>
-    <a href="https://orcid.org/0009-0009-6203-1850">Lihao Tian</a></span>, <span>
-    <a href="https://orcid.org/0009-0009-6203-1850">Zhongren Wang</a></span>, <span></span>
-    <span class="author-highlighted"> <a href="https://LLLiuxk.github.io/" target="_blank">Xiaokang Liu</a></span>, <span>
-    <a href="https://orcid.org/0009-0009-6203-1850">Kaifeng Tian</a></span>, <span></span>
-    <a href="https://www.cs.bgu.ac.il/~asharf/" target="_blank">Andrei Sharf</a></span>, <span></span>
-    <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a></span>, <span></span>		
-  </div>
- 
-  <span class="pub-publication">   
-    Additive Manufacturing
-  </span>
-  <span class="middot-divider"></span>
-  <span class="article-date"> 
-    April 2025
-  </span>
-</div>
-</div>     
-<a href="https://doi.org/10.1016/j.addma.2025.104739" class="summary-link">
-  <div class="article-style">
-    A framework to generate fabricable, large-scale stochastic porous microstructures that balance smooth connectivity with global randomness.
-    This method introduces a parameterized dual-layer generative model combining Wang cube rules for boundary periodicity.     
-  </div>
-</a>       
-<div class="btn-links">
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1016/j.addma.2025.104739" target="_blank" rel="noopener">
-  DOI
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <!-- Publications -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
 
+            <!-- Pub 1: Principal Stress Field -->
+            <div class="pub-item fade-up">
+                <div class="pub-thumb">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0010448525001162">
+                        <img src="./index_files/Principal_ribs.jpg"
+                            alt="Principal Stress Field-guided Optimization for Rib Structure Generation"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <h3><a href="https://www.sciencedirect.com/science/article/pii/S0010448525001162">Principal Stress
+                            Field-guided Optimization for Rib Structure Generation</a></h3>
+                    <p class="pub-authors">
+                        <a href="https://orcid.org/0009-0009-6203-1850">Longdu Liu</a>,
+                        Xiangjun Wu, Jiqiang Huang,
+                        <a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a>,
+                        <span class="me">Xiaokang Liu</span>,
+                        <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a>,
+                        <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a>
+                    </p>
+                    <p class="pub-venue">Computer-Aided Design · August 2025</p>
+                    <p class="pub-desc">A direct computational framework to optimize adaptive rib layouts on freeform
+                        surfaces by extracting networks directly from the principal stress field using centroidal
+                        Voronoi tessellation.</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.cad.2025.103955" target="_blank">DOI</a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Pub 2: SPPM -->
+            <div class="pub-item fade-up">
+                <div class="pub-thumb">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2214860425001034">
+                        <img src="./index_files/SPPM.jpg" alt="Fabricable Stochastic Periodic Porous Microstructures"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <h3><a href="https://www.sciencedirect.com/science/article/pii/S2214860425001034">Fabricable
+                            Stochastic Periodic Porous Microstructures: A Wang Cube and Gaussian Kernel Approach</a>
+                    </h3>
+                    <p class="pub-authors">
+                        <a href="https://orcid.org/0009-0009-6203-1850">Lihao Tian</a>,
+                        Zhongren Wang,
+                        <span class="me">Xiaokang Liu</span>,
+                        Kaifeng Tian,
+                        <a href="https://www.cs.bgu.ac.il/~asharf/" target="_blank">Andrei Sharf</a>,
+                        <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a>
+                    </p>
+                    <p class="pub-venue">Additive Manufacturing · April 2025</p>
+                    <p class="pub-desc">A framework to generate fabricable, large-scale stochastic porous
+                        microstructures that balance smooth connectivity with global randomness using a parameterized
+                        dual-layer generative model.</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.addma.2025.104739" target="_blank">DOI</a>
+                    </div>
+                </div>
+            </div>
 
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5">
-      
-      
-      
-      <a href="./Auxetic_Dihedral/index.html">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/teaser1.jpg" alt="Auxetic Dihedral Escher Tessellations" loading="lazy">
-      </a>
-      
-    </div>
+            <!-- Pub 3: Auxetic Dihedral -->
+            <div class="pub-item fade-up">
+                <div class="pub-thumb">
+                    <a href="./Auxetic_Dihedral/index.html">
+                        <img src="./index_files/teaser1.jpg" alt="Auxetic Dihedral Escher Tessellations" loading="lazy">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <h3><a href="./Auxetic_Dihedral/index.html">Auxetic Dihedral Escher Tessellations</a></h3>
+                    <p class="pub-authors">
+                        <span class="me">Xiaokang Liu</span>,
+                        <a href="https://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a>,
+                        <a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a>,
+                        <a href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/">Oliver
+                            Deussen</a>,
+                        <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>
+                    </p>
+                    <p class="pub-venue">Graphical Models (presented at <strong>CVM 2024</strong>) · April 2024</p>
+                    <p class="pub-desc">A framework to optimize dual-shape tessellations into deployable rotating
+                        semi-rigid structures while maintaining shape similarity by introducing a metric function that
+                        simultaneously considers rotational degrees of freedom and shape semantics.</p>
+                    <div class="pub-links">
+                        <a href="https://drive.google.com/file/d/1Riv-nN1JNHAakfOq8V87nFdfWW-G21SD/view?usp=drive_link"
+                            target="_blank">PDF</a>
+                        <a href="https://doi.org/10.1016/j.gmod.2024.101215" target="_blank">DOI</a>
+                        <a href="./Auxetic_Dihedral/files/Auxetic_dihedral.pptx" target="_blank">PPT</a>
+                        <a href="./Auxetic_Dihedral/files/dataset.zip" target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="./Auxetic_Dihedral/index.html">Auxetic Dihedral Escher Tessellations</a>
-        </div>
-        <div class="stream-meta article-metadata">
-          <div class="article-metadata">
-            <div> 
-              <span class="author-highlighted">
-                <a href="https://liuxk.cn/">Xiaokang Liu</a></span>, <span>
-                <a href="https://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a></span>, <span>
-                <a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a></span>, <span>
-                <a href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/"> Oliver Deussen</a></span>, <span>
-                <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a></span>
-  </div>
-  
-  <span class="pub-publication">
-    Graphical Models (presented on <strong>CVM 2024</strong>)    
-  </span>  
-  <span class="middot-divider"></span>
-  <span class="article-date"> April 2024
-  </span>
- 
-</div>
+            <!-- Pub 4: Waiting Time -->
+            <div class="pub-item fade-up">
+                <div class="pub-thumb">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860423003068">
+                        <img src="./index_files/teaser2.jpg"
+                            alt="Waiting Time Prediction for Bottom-up Vat Photopolymerization" loading="lazy">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860423003068">Waiting Time
+                            Prediction for Bottom-up Vat Photopolymerization</a></h3>
+                    <p class="pub-authors">
+                        <a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a>,
+                        <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a>,
+                        <span class="me">Xiaokang Liu</span>,
+                        Jian Zhang, Tengfei Jiang,
+                        <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a>,
+                        <a href="http://cfcs.pku.edu.cn/baoquan/" target="_blank">Baoquan Chen</a>
+                    </p>
+                    <p class="pub-venue">Additive Manufacturing · July 2023</p>
+                    <p class="pub-desc">A novel waiting time prediction method for bottom-up vat photopolymerization
+                        (WTP-VP) that uses a prediction model based on the concept of a prediction feature region.</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.addma.2023.103693" target="_blank">DOI</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pub 5: Multi-Scale Wang Tiles -->
+            <div class="pub-item fade-up">
+                <div class="pub-thumb">
+                    <a href="./Multi_scale/index.html">
+                        <img src="./index_files/teaser3.jpg" alt="Fabricable Multi-Scale Wang Tiles" loading="lazy">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <h3><a href="./Multi_scale/index.html">Fabricable Multi-Scale Wang Tiles</a></h3>
+                    <p class="pub-authors">
+                        <span class="me">Xiaokang Liu</span>,
+                        Chenran Li,
+                        <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a>,
+                        <a href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/"
+                            target="_blank">Oliver Deussen</a>,
+                        <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a>
+                    </p>
+                    <p class="pub-venue">Computer Graphics Forum (presented at <strong>SGP 2022</strong>) · October 2022
+                    </p>
+                    <p class="pub-desc">A method to generate fabricable multi-scale Wang Tiles by utilizing a parametric
+                        model and a combination tiles generation method to create representative sets of multi-scale
+                        tiles.</p>
+                    <div class="pub-links">
+                        <a href="https://drive.google.com/file/d/1aFFCdwcGchJ-2im_0Y6CwlfpvTRk7uEv/view?usp=drive_link"
+                            target="_blank">PDF</a>
+                        <a href="https://doi.org/10.1111/cgf.14610" target="_blank">DOI</a>
+                        <a href="./Multi_scale/files/SGP_Presentation.pptx" target="_blank">PPT</a>
+                        <a href="./Multi_scale/files/Fabricable girl.mp4" target="_blank">Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pub 6: Dihedral Escher -->
+            <div class="pub-item fade-up">
+                <div class="pub-thumb">
+                    <a href="./Dihedral/index.html">
+                        <img src="./index_files/teaser4.jpg" alt="Fabricable Dihedral Escher Tessellations"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <h3><a href="./Dihedral/index.html">Fabricable Dihedral Escher Tessellations</a></h3>
+                    <p class="pub-authors">
+                        <span class="me">Xiaokang Liu</span>,
+                        <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a>,
+                        <a href="https://www.cs.bgu.ac.il/~asharf/" target="_blank">Andrei Sharf</a>,
+                        <a href="https://www.researchgate.net/profile/Xin-Yan-13" target="_blank">Xin Yan</a>,
+                        <a href="https://www.cs.huji.ac.il/~danix/" target="_blank">Dani Lischinski</a>,
+                        <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a>
+                    </p>
+                    <p class="pub-venue">CAD 2020 (presented at <strong>SPM 2020</strong>) · June 2020 · <span
+                            class="award">🏆 Best Paper Award, 1st Place</span></p>
+                    <p class="pub-desc">A method for generating dual-shape tessellations. Given an input image, search
+                        for a dual image in the graphic library and optimize both simultaneously to create
+                        "mutual-surrounding" dual patterns introduced onto 3D surfaces.</p>
+                    <div class="pub-links">
+                        <a href="https://drive.google.com/file/d/1Riv-nN1JNHAakfOq8V87nFdfWW-G21SD/view"
+                            target="_blank">PDF</a>
+                        <a href="https://doi.org/10.1016/j.cad.2020.102853" target="_blank">DOI</a>
+                        <a href="./Dihedral/files/DihedralTessellation.pptx" target="_blank">PPT</a>
+                        <a href="./Dihedral/files/Fabricable girl.mp4" target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        
-        <a href="./Auxetic_Dihedral/index.html" class="summary-link">
-          <div class="article-style">
-            A framework to optimize dual-shape tessellations into deployable rotating semi-rigid structures while maintaining shape similarity by introducing a metric function that simultaneously considers rotational degrees of freedom and shape semantics, along with a two-step deployable optimization algorithm.
-          </div>
-        </a>
-     
-        <div class="btn-links">
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://drive.google.com/file/d/1Riv-nN1JNHAakfOq8V87nFdfWW-G21SD/view?usp=drive_link" target="_blank" rel="noopener">
-  PDF
-</a>
+    </section>
 
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1016/j.gmod.2024.101215" target="_blank" rel="noopener">
-  DOI
-</a>
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="./Auxetic_Dihedral/files/Auxetic_dihedral.pptx" target="_blank" rel="noopener">
-  PPT
-</a>
-
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="./Auxetic_Dihedral/files/dataset.zip" target="_blank" rel="noopener">
-  Dataset
-</a>
-
-
+    <!-- Contact -->
+    <section id="contact" class="section" style="padding-bottom: 40px;">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <ul class="contact-list fade-up">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="1.8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                    <a href="mailto:lxk811@gmail.com">lxk811@gmail.com</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="1.8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    72 Binhai Road, Jimo, Qingdao, P.R. China
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
+    </section>
 
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5"> 
-      <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860423003068">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/teaser2.jpg" alt="A Method for Automatically Animating Children’s Drawings of the Human Figure" loading="lazy">
-      </a>
-      
-    </div>
-
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860423003068">Waiting Time Prediction for Bottom-up Vat Photopolymerization</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Xiaokang Liu · 忘川三途</p>
         </div>
+    </footer>
+
+    <script>
+        // Nav scroll effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile nav toggle
+        const toggle = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('active');
+        });
+        // Close mobile menu on link click
+        links.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => links.classList.remove('active'));
+        });
+
+        // Scroll fade-in animation
+        const faders = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        faders.forEach(el => observer.observe(el));
+    </script>
+
+</body>
 
-        <div class="stream-meta article-metadata">
-<div class="article-metadata">
-  <div>
-    <span>
-    <a href="https://orcid.org/0009-0009-6203-1850">Lingxin Cao</a></span>, <span>
-    <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a></span>, <span>
-    <span class="author-highlighted"> <a href="https://LLLiuxk.github.io/" target="_blank">Xiaokang Liu</a></span>, <span>
-    <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860423003068" target="_blank">Jian Zhang</a></span>, <span>
-    <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860423003068" target="_blank">Tengfei Jiang</a></span>, <span>
-    <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a></span>, <span>
-    <a href="http://cfcs.pku.edu.cn/baoquan/" target="_blank">Baoquan Chen</a></span>
-		
-  </div>
- 
-  <span class="pub-publication">   
-    Additive Manufacturing
-  </span>
-  <span class="middot-divider"></span>
-  <span class="article-date"> 
-    July 2023
-  </span>
-</div>
-</div>     
-<a href="https://doi.org/10.1016/j.addma.2023.103693" class="summary-link">
-  <div class="article-style">
-    A novel waiting time prediction method for bottom-up vat photopolymerization (WTP-VP) that uses a prediction model based on the concept of a prediction feature region. 
-    This method is suitable for actual production in the industry as it predicts waiting time in real-time for contours with complex topologies and requires less data than machine learning using per-layer mask images directly.
-  </div>
-</a>       
-<div class="btn-links">
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1016/j.addma.2023.103693" target="_blank" rel="noopener">
-  DOI
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5">
-    
-      <a href="./Multi_scale/index.html">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/teaser3.jpg" alt="A Method for Automatically Animating Children’s Drawings of the Human Figure" loading="lazy">
-      </a>
-      
-    </div>
-
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="./Multi_scale/index.html">Fabricable Multi-Scale Wang Tiles</a>
-        </div>
-
-        <div class="stream-meta article-metadata">
-<div class="article-metadata">
-  <div>
-  <span class="author-highlighted">
-    <a href="https://LLLiuxk.github.io/" target="_blank">Xiaokang Liu</a></span>, <span>
-    <a href="https://LLLiuxk.github.io/Multi_scale/index" target="_blank">Chenran Li</a></span>, <span>
-    <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a></span>, <span>
-    <a href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/" target="_blank">Oliver Deussen</a></span>, <span>
-		<a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a></span>
-  </div>
- 
-  <span class="pub-publication">   
-    Computer Graphics Forum (presented on <strong>SGP 2022</strong>)   
-  </span>
-  <span class="middot-divider"></span>
-  <span class="article-date"> 
-    October 2022
-  </span>
-</div>
-</div>    
-<a href="./Multi_scale/index.html" class="summary-link">
-  <div class="article-style">
-    A method to generate fabricable multi-scale Wang Tiles by utilizing a parametric model and a combination tiles generation method to create representative sets of multi-scale tiles. These sets effectively cover a wide range of densities while minimizing the number of elements, and employs a hierarchical strategy to quickly and accurately fill a given density field.
-  </div>
-</a>       
-<div class="btn-links">
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://drive.google.com/file/d/1aFFCdwcGchJ-2im_0Y6CwlfpvTRk7uEv/view?usp=drive_link" target="_blank" rel="noopener">
-  PDF 
-</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1111/cgf.14610" target="_blank" rel="noopener">
-  DOI
-</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="./Multi_scale/files/SGP_Presentation.pptx" target="_blank" rel="noopener">
-  PPT
-</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="./Multi_scale/files/Fabricable girl.mp4" target="_blank" rel="noopener">
-  Video
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5">
-    
-      <a href="./Dihedral/index.html">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./index_files/teaser4.jpg" alt="A Method for Automatically Animating Children’s Drawings of the Human Figure" loading="lazy">
-      </a>
-      
-    </div>
-
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="./Dihedral/index.html">Fabricable Dihedral Escher Tessellations</a>
-        </div>
-
-        <div class="stream-meta article-metadata">
-<div class="article-metadata">
-  <div>
-  <span class="author-highlighted">
-    <a href="https://LLLiuxk.github.io/" target="_blank">Xiaokang Liu</a></span>, <span>
-    <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a></span>, <span>
-    <a href="https://www.cs.bgu.ac.il/~asharf/" target="_blank">Andrei Sharf</a></span>, <span>
-    <a href="https://www.researchgate.net/profile/Xin-Yan-13" target="_blank">Xin Yan</a></span>, <span>
-    <a href="https://www.cs.huji.ac.il/~danix/" target="_blank">Dani Lischinski</a></span>, <span>
-		<a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a></span>
-  </div>
- 
-  <span class="pub-publication">   
-    CAD 2020 (Presented on <strong>SPM 2020</strong>, Best Paper Award, 1st Place)
-  </span>
-  <span class="middot-divider"></span>
-  <span class="article-date"> 
-    June 2020
-  </span>
-</div>
-</div>    
-<a href="./Dihedral/index.html" class="summary-link">
-  <div class="article-style">
-    A method for generating dual-shape tessellations. Given an input image, search for a dual image in the graphic library and optimize both simultaneously to create "mutual-surrounding" dual patterns, which are introduced onto a 3D surface, innovatively generating perforated surface model.
-  </div>
-</a>       
-<div class="btn-links">
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://drive.google.com/file/d/1Riv-nN1JNHAakfOq8V87nFdfWW-G21SD/view" target="_blank" rel="noopener">
-  PDF 
-</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1016/j.cad.2020.102853" target="_blank" rel="noopener">
-  DOI
-</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="./Dihedral/files/DihedralTessellation.pptx" target="_blank" rel="noopener">
-  PPT
-</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="./Dihedral/files/Fabricable girl.mp4" target="_blank" rel="noopener">
-  Dataset
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-</section>
-
-  
-  
-<section id="experience" class="home-section wg-experience  " style="padding: 30px 0 50px 0;">
-  <div class="home-section-bg "></div>
-   <div class="container">
-   <div class="row  ">
-      <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-           <h1 class="mb-0">Experience</h1>
-      </div>
-      <div class="col-12 col-lg-8">
-
-  <!-- <div class="row experience">
-    <div class="col-auto text-center flex-column d-none d-sm-flex">
-     <div class="row h-50">
-       <div class="col ">&nbsp;</div>
-       <div class="col">&nbsp;</div>
-     </div>
-     <div class="m-2">
-       <span class="badge badge-pill border ">&nbsp;</span>
-     </div>
-     <div class="row h-50">
-       <div class="col border-right">&nbsp;</div>
-       <div class="col">&nbsp;</div>
-     </div>
-   </div>
-   
-   <div class="col py-2">
-     <div class="card">
-
-
-       <div class="container">
-         <div class="row">
-           <div class="col-12 col-lg-5 d-flex align-content-start"> <a href="https://people.csail.mit.edu/liyifei/diffavatar/">   
-               <img style="border: 0px solid #8f9aa3;position: relative; vertical-align: bottom; min-height: 70%; top: 10%;  padding-right: 0px; padding-bottom: 15px;  max-height: 90% " class="my-publication-card" src="./Yifei Li_files/diffavatar.png">
-               
-             </a>
-           </div>
-           
-           <div class="card-body  col-12 col-lg-7">
-           
-             <div class="d-flex align-content-start">
-               <div class="mr-2 mb-2"><a href="https://about.meta.com/realitylabs/" target="_blank" rel="noopener"><img src="./Yifei Li_files/meta2.svg" width="56px" height="56px" alt="Meta Reality Labs"></a></div>
-               <div>
-             
-   
-                 <div class="section-subheading card-title exp-title text-muted my-0">Research Scientist Intern</div>
-                 <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://about.meta.com/realitylabs/" target="_blank" rel="noopener">Meta Reality Labs</a></div>
-
-                 <div class="text-muted exp-meta">
-                   Managed by &nbsp;<a href="https://tuurstuyck.github.io/" target="_blank" rel="noopener">Tuur Stuyck</a>
-                 </div>
-
-                 <div class="text-muted exp-meta">
-                   May 2023 –
-                   
-                     Sep 2023
-                   
-                   
-                     <span class="middot-divider"></span>
-                     <span>Sausalito, CA</span>
-                   
-                 </div>
-               </div>
-             </div>
-             
-   
-             <div class="card-text">Research on  physics-based digital avatar body and garment shape and material joint optimization using differentiable simulation, which resulted in a <a href="https://people.csail.mit.edu/liyifei/diffavatar/">paper</a> that is currently in submission.</div>
-        
-         </div>
-        
-
-         </div>
-       </div>
-
-
-     </div>
-   </div>
-  </div>
- 
-  <div class="row experience">
-   
-   <div class="col-auto text-center flex-column d-none d-sm-flex">
-     <div class="row h-50">
-       <div class="col border-right">&nbsp;</div>
-       <div class="col">&nbsp;</div>
-     </div>
-     <div class="m-2">
-       <span class="badge badge-pill border ">&nbsp;</span>
-     </div>
-     <div class="row h-50">
-       <div class="col border-right">&nbsp;</div>
-       <div class="col">&nbsp;</div>
-     </div>
-   </div>
-   
-   <div class="col py-2">
-     <div class="card">
-
-
-       <div class="container">
-         <div class="row">
-           <div class="card-body col-12 col-lg-12"> 
-           
-             <div class="d-flex align-content-start">
-               <div class="mr-2 mb-2"><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener"><img src="./Yifei Li_files/nvidia.svg" width="56px" height="56px" alt="NVIDIA"></a></div>
-               <div>
-             
-   
-                 <div class="section-subheading card-title exp-title text-muted my-0">Research Intern</div>
-                 <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener">NVIDIA</a></div>
-
-                 <div class="text-muted exp-meta">
-                   Managed by &nbsp;<a href="https://www.linkedin.com/in/mmacklin/" target="_blank" rel="noopener">Miles Macklin</a>
-                   ,&nbsp;<a href="https://jonathancleaf.com/" target="_blank" rel="noopener">Jonathan Leaf</a>
-                 </div>
-
-                 <div class="text-muted exp-meta">
-                   May 2022 –
-                   
-                     Aug 2022
-                   
-                   
-                     <span class="middot-divider"></span>
-                     <span>(remote) Cambridge, MA</span>
-                   
-                 </div>
-               </div>
-             </div>
-             
-   
-             <div class="card-text">Research intern in the Simulation Technology group, where I worked on neural surrogate simulation model for cloth-body dynamics.</div>
-        
-         </div>
-        
-
-         </div>
-       </div>
-
-
-     </div>
-   </div>
-  </div>
- 
- 
- 
- 
- 
- <div class="row experience">
-   
-   <div class="col-auto text-center flex-column d-none d-sm-flex">
-     <div class="row h-50">
-       <div class="col border-right">&nbsp;</div>
-       <div class="col">&nbsp;</div>
-     </div>
-     <div class="m-2">
-       <span class="badge badge-pill border ">&nbsp;</span>
-     </div>
-     <div class="row h-50">
-       <div class="col ">&nbsp;</div>
-       <div class="col">&nbsp;</div>
-     </div>
-   </div>
-   
-   <div class="col py-2">
-     <div class="card">
-
-
-       <div class="container">
-         <div class="row">
-           <div class="col-12 col-lg-5 d-flex align-content-start"> <a href="https://www.youtube.com/watch?v=BjiaMBk6rHk">   
-               <img style="border: 0px solid #8f9aa3;position: relative; vertical-align: bottom; min-height: 70%; top: 10%;  padding-right: 0px; padding-bottom: 15px;  max-height: 90% " class="my-publication-card" src="./Yifei Li_files/grass-down-Bridge.png">
-               
-             </a>
-           </div>
-           
-           <div class="card-body  col-12 col-lg-7">
-           
-             <div class="d-flex align-content-start">
-               <div class="mr-2 mb-2"><a href="https://www.activisionblizzard.com/" target="_blank" rel="noopener"><img src="./Yifei Li_files/atvi3.svg" width="56px" height="56px" alt="Activision Blizzard"></a></div>
-               <div>
-             
-   
-                 <div class="section-subheading card-title exp-title text-muted my-0">Software Engineering Intern</div>
-                 <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.activisionblizzard.com/" target="_blank" rel="noopener">Activision Blizzard</a></div>
-
-                 <div class="text-muted exp-meta">
-                   Managed by &nbsp;<a href="https://www.linkedin.com/in/cdcorrea/" target="_blank" rel="noopener">Michael Vance</a>
-                   ,&nbsp;<a href="https://www.linkedin.com/in/wade-brainerd/" target="_blank" rel="noopener">Wade Brainerd</a>
-                 </div>
-
-                 <div class="text-muted exp-meta">
-                   May 2018 –
-                   
-                     Aug 2018
-                   
-                   
-                     <span class="middot-divider"></span>
-                     <span>Portland, ME</span>
-                   
-                 </div>
-               </div>
-             </div>
-             
-   
-             <div class="card-text">Implemented and optimized (~7ms/frame on PS4 ) a procedural grass system that runs on GPU for the core game engine of Call of Duty Black Ops 4, which was shipped with the game’s battle royale mode across all platforms in October 2018. You can see the procedural grass system in the <a href="https://www.youtube.com/watch?v=BjiaMBk6rHk">BO4’s Battle Royale mode trailer</a>.</div>
-        
-         </div>
-        
-
-         </div>
-       </div>
-
-
-     </div>
-   </div>
- </div> -->
- 
- 
-</div>
-
-   
-     </div>
-   
-
-   </div>
- </section>
-  
-  <!-- <section id="posts" class="home-section wg-pages  " style="padding: 30px 0 50px 0;">
-   <div class="home-section-bg "></div>
-    <div class="container"> 
-      <div class="row  ">       
-          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">Posts</h1>
-            
-          </div>
-<div class="col-12 col-lg-8">
-
-<div class="media stream-item">
-  <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-5">
-  
-      <a href="https://people.csail.mit.edu/liyifei/post/phd-resource/">
-        <img style="border: 2px solid #8f9aa3; padding-right: 0px;" class="my-publication-card" src="./Yifei Li_files/featured_hu4f7af0eb4165f229904371014436b91b_4385293_800x0_resize_q100_lanczos.jpg" alt="Helpful Resources" loading="lazy">
-      </a>
-      
-    </div>
-
-    <div class="col-12 col-lg-7">
-      <div class="media-body">
-        <div class="section-subheading article-title mb-0 mt-0">
-          <a href="https://people.csail.mit.edu/liyifei/post/phd-resource/">Helpful Resources</a>
-        </div>
-
-        <div class="stream-meta article-metadata">
-  
-<div class="article-metadata">
- 
-  <div>
-  <span class="author-highlighted">
-      <a href="https://people.csail.mit.edu/liyifei/">Yifei Li</a></span>
-  </div>
-  
-  <span class="middot-divider"></span>
-  <span class="article-date">
- 
-    Sep 25, 2022
-  </span>
- 
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-        </div>
-        
-        <a href="https://people.csail.mit.edu/liyifei/post/phd-resource/" class="summary-link">
-          <div class="article-style">
-            A growing resource list that I find helpful for research and navigating through PhD and some questions I get asked frequently.
-          </div>
-        </a>
-        
-
-        
-
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-</div>
-
-
-</div>
-
-
-    
-      </div>
-    
-
-    </div>
-  </section>
-
-   -->
-  
-  
-  
-  <section id="contact" class="home-section wg-contact  " style="padding: 30px 0 50px 0;">
-   <div class="home-section-bg "></div>
-    <div class="container">
-
-    
-      <div class="row  ">
-      
-        
-          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">Contact</h1>
-            
-          </div>
-  
-<div class="col-12 col-lg-8">
-
-  <ul class="fa-ul">   
-    <li>
-      <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
-      <span id="person-email"><a href="mailto:liyifei@csail.mit.edu">lxk811@gmail.com</a></span>
-    </li>
-     <li>
-        <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
-        <span id="person-address">72 Binhai Road, Jimo, Qingdao, P.R. China</span>
-      </li>
-
-  </ul>
-
-</div>
-
-
-    
-      </div>
-    
-
-    </div>
-  </section>
-
-
-
-  </div>
-
-  <div class="page-footer">
-       
-    <div class="container">
-      <footer class="site-footer">
-  <p class="powered-by">
-    © 2024 Xiaokang Liu | 忘川三途
-  </p>
-  <p class="powered-by">
-    
-  </p>
-</footer>
-
-    </div>
-    
-  </div>
-
-             
-</div>
 </html>
